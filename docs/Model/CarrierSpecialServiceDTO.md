@@ -1,0 +1,52 @@
+# # CarrierSpecialServiceDTO
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**self** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+**ship_vendor** | **string** | Shipping carrier that provides the service. |
+**item** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+**pack** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+**sales_order** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+**order_line** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+**customer_order** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+**customer_order_line** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+**battery** | **bool** | Whether the associated item includes a battery or is itself a battery. | [optional]
+**battery_material** | **string** | Type of lithium battery. | [optional]
+**battery_packing** | **string** | How a lithium battery is packed in the shipment. | [optional]
+**battery_regulation** | **string** | Used when shipping lithium batteries. | [optional]
+**chemical_identifier** | **string** | Record identifier for the chemical in either the UPS Chemical Table or the Personal Chemical Table for the UPS account. Applies only for shipments with UPS socket-based integrations. | [optional]
+**commodity_regulations** | **string** | Code for the regulation level of the dangerous goods commodity. Applies only for shipments with UPS socket-based integrations. Provide a value of FR for Fully Regulated, LQ for Limited Quantity, EQ for Excepted Quantity, or LR for Lightly Regulated. | [optional]
+**dangerous_goods_amount** | **int** | Weight of the dangerous good. If a weight is not specified, then the pack weight of the item is used. | [optional]
+**dangerous_goods_uom** | **string** | Unit of measure for the weight of the dangerous good. | [optional]
+**hazard_class** | **int** | IATA hazardous material class or division. | [optional]
+**hazard_label_description** | **string** | Type of label that is required on the package for the dangerous goods commodity. Applies only for shipments with UPS socket-based integrations. | [optional]
+**hazmat_excepted_quantity** | **string** | Maximum quantity per inner and outer packaging for transporting dangerous goods as excepted quantities (very small volumes). | [optional]
+**hazmat_limited_quantity** | **string** | Maximum quantity per inner packaging or article for transporting dangerous goods as limited quantities. | [optional]
+**limited_qty_packing_instructions** | **string** | Packing instructions for limited quantity hazardous materials. | [optional]
+**packaging_group_type** | **string** | Group level that reflects the potential degree of danger represented by the regulated good. Provide a value of (null), I, II, or III. Applies only for shipments with UPS socket-based integrations. | [optional]
+**packaging_type** | **string** | Either the IATA packing group for a hazardous commodity or the FedEx package type when packing a shipment in FedEx Express flat rate packaging. | [optional]
+**packing_instructions** | **string** | IATA documentation and limits for validation of an individual packing group or category. | [optional]
+**proper_shipping_name** | **string** | Proper shipping name for the hazardous material. | [optional]
+**regulation_set** | **string** | Regulatory set that is associated with a shipment of dangerous goods. Applies only for shipments with UPS socket-based integrations. Provide a value of ADR for Europe to Europe ground movement, CFR for hazardous materials regulated by the U.S. Department of Transportation within the U.S. or ground shipments to Canada, IATA for worldwide air movement, or TDG for Canada-to-Canada ground movement or Canada-to-U.S. standard movement. | [optional]
+**sub_risk_class1** | **string** | Subrisk class for a dangerous good. Applies only for shipments with UPS socket-based integrations. | [optional]
+**sub_risk_class2** | **string** | Additional subrisk class for a dangerous good with multiple subrisks. Applies only for shipments with UPS socket-based integrations. | [optional]
+**sub_risk_class3** | **string** | Additional subrisk class for a dangerous good with multiple subrisks. Applies only for shipments with UPS socket-based integrations. | [optional]
+**technical_name** | **string** | Recognized chemical name for the dangerous good that is currently used in scientific handbooks, journals, and texts. Applies only for shipments with UPS socket-based integrations. | [optional]
+**transportation_mode** | **string** | Mode of transportation for the shipment that includes dangerous goods. Applies only for shipments with UPS socket-based integrations. Provide a value of Highway, Ground, PAX, Passenger Aircraft, CAO, or Cargo Aircraft Only. | [optional]
+**un_number** | **string** | Four-digit number/code that is assigned to a dangerous good by the United Nations Subcommittee of Experts on the Transport of Dangerous Goods. The number identifies dangerous goods and applies all provisions such as packaging, marking, labeling of packages, compatibility between dangerous goods, carriage during transport, and file are spillage control measures in case of emergency. | [optional]
+**ships_with_dry_ice** | **bool** | Whether an item ships in a package with dry ice. | [optional]
+**medical_use** | **bool** | Whether the item is used for medical purposes, which may enable you to take advantage of discounted rates. Applies only for shipments with UPS socket-based integrations. | [optional]
+**alcohol** | **bool** | Whether the associated item is classified as alcohol such as beer, wine, or spirits. Supported only for shipments with UPS socket-based integrations. | [optional]
+**hold_at_location** | **bool** | Whether the shipment should be held at a specific FedEx location instead of being delivered directly to the customer or trading partner that placed the order. The customer or trading partner can then pick up the shipment at their convenience. | [optional]
+**return_receipt_requested** | **bool** | Whether to request a return receipt for shipments with Stamps.com. | [optional]
+**saturday_delivery** | **bool** | Whether to request Saturday delivery for the shipment that is associated with the order. Applies only for shipments with UPS socket-based integrations. | [optional]
+**liftgate_delivery** | **bool** | Whether to request liftgate delivery for the shipment that is associated with the order when the order includes large, heavy items. | [optional]
+**export_compliance_statement** | **string** | Reserved for future use. | [optional]
+**created_date** | **\DateTime** | Date and time that the Carrier Special Service record was created. | [optional] [readonly]
+**updated_date** | **\DateTime** | Date and time that the Carrier Special Service record was last updated. | [optional] [readonly]
+**created_by** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+**updated_by** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

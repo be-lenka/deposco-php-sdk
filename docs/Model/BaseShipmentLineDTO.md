@@ -1,0 +1,50 @@
+# # BaseShipmentLineDTO
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**self** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+**business_unit** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+**shipment** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+**number** | **string** | Unique identification number for the shipment line. |
+**order_line** | [**\BeLenka\Deposco\Model\NullableEntityRef**](NullableEntityRef.md) |  | [optional]
+**order_line_details** | [**\BeLenka\Deposco\Model\BaseShipmentLineDTOOrderLineDetails**](BaseShipmentLineDTOOrderLineDetails.md) |  | [optional]
+**item** | [**\BeLenka\Deposco\Model\NullableEntityRef**](NullableEntityRef.md) |  | [optional]
+**substituted_item** | [**\BeLenka\Deposco\Model\NullableEntityRef**](NullableEntityRef.md) |  | [optional]
+**pack** | [**\BeLenka\Deposco\Model\NullableEntityRef**](NullableEntityRef.md) |  | [optional]
+**pack_details** | [**\BeLenka\Deposco\Model\BaseShipmentLineDTOPackDetails**](BaseShipmentLineDTOPackDetails.md) |  | [optional]
+**description** | **string** | Text that provides additional information about the shipment line. | [optional]
+**order_pack_quantity** | **int** | Quantity of the item/pack that was ordered. | [optional]
+**shipped_pack_quantity** | **int** | Quantity of the item/pack that was shipped. | [optional]
+**damaged_pack_quantity** | **int** | Quantity of the item/pack that was damaged. | [optional]
+**shipped_damaged_pack_quantity** | **int** | General shipment attribute. | [optional]
+**returned_pack_quantity** | **int** | Quantity of the item/pack that was returned. | [optional]
+**canceled_pack_quantity** | **int** | Quantity of the item/pack on the order line that was canceled. | [optional]
+**shortage_pack_quantity** | **int** | Quantity of the item/pack that is _not_ being shipped for the order line. | [optional]
+**picked_pack_quantity** | **int** | Quantity of the item/pack that has been picked to fulfill the order line. | [optional]
+**package_count** | **int** | Count of the number of packages for the shipment line. | [optional]
+**piece_count** | **int** | General shipment attribute. | [optional]
+**total_weight** | [**\BeLenka\Deposco\Model\BaseShipmentLineDTOTotalWeight**](BaseShipmentLineDTOTotalWeight.md) |  | [optional]
+**chargeable_weight** | [**\BeLenka\Deposco\Model\BaseShipmentLineDTOChargeableWeight**](BaseShipmentLineDTOChargeableWeight.md) |  | [optional]
+**lot_number** | **string** | Lot number of the stock for the item on the shipment line. | [optional]
+**line_serial_numbers** | [**\BeLenka\Deposco\Model\BaseShipmentLineDTOLineSerialNumbersInner[]**](BaseShipmentLineDTOLineSerialNumbersInner.md) | Array of serial numbers for the stock on the shipment line. | [optional]
+**born_on_date** | **\DateTime** | Born On date of the stock for the item on the shipment line. | [optional]
+**expiration_date** | **\DateTime** | Expiration date of the stock for the item on the shipment line. | [optional]
+**inventory_condition** | **string** | Condition of the inventory on the shipment line. | [optional]
+**inventory_attribute1** | **string** | Additional field for inventory attributes for the stock on the shipment line. | [optional]
+**inventory_attribute2** | **string** | Additional field for inventory attributes for the stock on the shipment line. | [optional]
+**unit_cost** | **int** | Unit cost for the item on the shipment line. | [optional]
+**freight_cost** | **int** | Cost to ship the item on the shipment line. | [optional]
+**tax_cost** | **int** | Tax cost for the shipment line. | [optional]
+**hazmat_flag** | **bool** | Whether the item on the shipment line includes hazardous materials. | [optional]
+**external_line_number** | **string** | Reference number for the associated order line in an external system where the order was created. | [optional]
+**import_reference** | **string** | Reference number for the order line that is associated with the shipment line when the order was imported from an external system. | [optional]
+**export_reference** | **string** | Reference number for the associated order line that is associated with the shipment line when the order was exported from Deposco to an external system. | [optional]
+**invoiced** | **bool** | General shipment attribute. | [optional]
+**created_date** | **\DateTime** | Date and time that the shipment line was created. | [optional] [readonly]
+**updated_date** | **\DateTime** | Date and time that the shipment line was last updated. | [optional] [readonly]
+**created_by** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+**updated_by** | [**\BeLenka\Deposco\Model\EntityRef**](EntityRef.md) |  | [optional] [readonly]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
