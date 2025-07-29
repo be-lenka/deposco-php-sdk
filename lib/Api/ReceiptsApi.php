@@ -616,7 +616,7 @@ class ReceiptsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $created_after,
+            $created_after->format(\DateTime::RFC3339),
             'createdAfter', // param base name
             'string', // openApiType
             'form', // style
@@ -625,7 +625,7 @@ class ReceiptsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $updated_after,
+            $updated_after->format(\DateTime::RFC3339),
             'updatedAfter', // param base name
             'string', // openApiType
             'form', // style
