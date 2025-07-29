@@ -57,23 +57,49 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+$config = \BeLenka\Deposco\Configuration::getDefaultConfiguration();
 
+$refreshToken = '<refresh_token>';
+$clientId = '<client_id>';
+$secretId = '<secret_id>';
 
+$token = new \BeLenka\Deposco\Auth($clientId, $secretId, $refreshToken, $config);
+$token->authenticate();
 
-$apiInstance = new BeLenka\Deposco\Api\AsynchronousOperationsApi(
+$apiInstance = new \BeLenka\Deposco\Api\ItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new \GuzzleHttp\Client(),
+    $config
 );
-$request_id = 'request_id_example'; // string | ID of the asynchronous request for which a status is requested. The request ID is returned in the response for the asynchronous request.
+
+// string | Code for the company (business unit) to which the resource is assigned. Optional if the application is restricted to one company.
+$business_unit = '<business_unit>';
+
+// string | ID that is returned in the links section of incomplete search results. Specify the search ID in this parameter to continue retrieving search results. Other search-related parameters are overridden by this parameter.
+$search_id = '';
+
+// string | Item number of the requested item.
+$number = '';
+
+// string | Name of the requested item.
+$name = '';
+
+// \DateTime | Search field for finding records created after the specified date and time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+$created_after = new \DateTime("2023-10-20T19:20:30+01:00");
+
+// \DateTime | Search field for finding records updated after the specified date and time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+$updated_after = new \DateTime("2023-10-20T19:20:30+01:00");
+
+// int | Number of records returned on each page of the search results. The default page size is 50.
+$page_size = 50;
 
 try {
-    $result = $apiInstance->getRequest($request_id);
+    $result = $apiInstance->getItems($business_unit, $search_id, $number, $name, $created_after, $updated_after, $page_size);
     print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling AsynchronousOperationsApi->getRequest: ', $e->getMessage(), PHP_EOL;
+} catch (\Exception $e) {
+    echo 'Exception when calling ItemsApi->getItems: ', $e->getMessage(), PHP_EOL;
 }
-
 ```
 
 ## API Endpoints
