@@ -43,6 +43,15 @@ use \BeLenka\Deposco\ObjectSerializer;
  */
 class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable
 {
+    const CM = 'cm';
+    const IN = 'in';
+    const FT = 'ft';
+    const M = 'm';
+    const CU_IN = 'CU in';
+    const CU_CM = 'CU cm';
+    const CU_FT = 'CU ft';
+    const CU_M = 'CU m';
+
     public const DISCRIMINATOR = null;
 
     /**
