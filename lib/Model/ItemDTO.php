@@ -859,11 +859,11 @@ class ItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (!is_null($this->container['purchase_cost']) && ($this->container['purchase_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'purchase_cost', must be smaller than or equal to 0.";
+            //$invalidProperties[] = "invalid value for 'purchase_cost', must be smaller than or equal to 0.";
         }
 
         if (!is_null($this->container['purchase_cost']) && ($this->container['purchase_cost'] < 0)) {
-            $invalidProperties[] = "invalid value for 'purchase_cost', must be bigger than or equal to 0.";
+            //$invalidProperties[] = "invalid value for 'purchase_cost', must be bigger than or equal to 0.";
         }
 
         $allowedValues = $this->getSerialCapturePointAllowableValues();
@@ -1798,10 +1798,10 @@ class ItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($purchase_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $purchase_cost when calling ItemDTO., must be smaller than or equal to 0.');
+            //throw new \InvalidArgumentException('invalid value for $purchase_cost when calling ItemDTO., must be smaller than or equal to 0.');
         }
         if (($purchase_cost < 0)) {
-            throw new \InvalidArgumentException('invalid value for $purchase_cost when calling ItemDTO., must be bigger than or equal to 0.');
+            //throw new \InvalidArgumentException('invalid value for $purchase_cost when calling ItemDTO., must be bigger than or equal to 0.');
         }
 
         $this->container['purchase_cost'] = $purchase_cost;
