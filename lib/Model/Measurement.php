@@ -310,11 +310,11 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable
         $invalidProperties = [];
 
         if (!is_null($this->container['measurement']) && ($this->container['measurement'] > 0)) {
-            $invalidProperties[] = "invalid value for 'measurement', must be smaller than or equal to 0.";
+            //$invalidProperties[] = "invalid value for 'measurement', must be smaller than or equal to 0.";
         }
 
         if (!is_null($this->container['measurement']) && ($this->container['measurement'] < 0)) {
-            $invalidProperties[] = "invalid value for 'measurement', must be bigger than or equal to 0.";
+            //$invalidProperties[] = "invalid value for 'measurement', must be bigger than or equal to 0.";
         }
 
         $allowedValues = $this->getUnitsAllowableValues();
@@ -365,10 +365,10 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($measurement > 0)) {
-            throw new \InvalidArgumentException('invalid value for $measurement when calling Measurement., must be smaller than or equal to 0.');
+            //throw new \InvalidArgumentException('invalid value for $measurement when calling Measurement., must be smaller than or equal to 0.');
         }
         if (($measurement < 0)) {
-            throw new \InvalidArgumentException('invalid value for $measurement when calling Measurement., must be bigger than or equal to 0.');
+            //throw new \InvalidArgumentException('invalid value for $measurement when calling Measurement., must be bigger than or equal to 0.');
         }
 
         $this->container['measurement'] = $measurement;
