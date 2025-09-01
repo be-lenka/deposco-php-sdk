@@ -851,11 +851,11 @@ class ItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (!is_null($this->container['unit_price']) && ($this->container['unit_price'] > 0)) {
-            $invalidProperties[] = "invalid value for 'unit_price', must be smaller than or equal to 0.";
+            //$invalidProperties[] = "invalid value for 'unit_price', must be smaller than or equal to 0.";
         }
 
         if (!is_null($this->container['unit_price']) && ($this->container['unit_price'] < 0)) {
-            $invalidProperties[] = "invalid value for 'unit_price', must be bigger than or equal to 0.";
+            //$invalidProperties[] = "invalid value for 'unit_price', must be bigger than or equal to 0.";
         }
 
         if (!is_null($this->container['purchase_cost']) && ($this->container['purchase_cost'] > 0)) {
@@ -1763,10 +1763,10 @@ class ItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($unit_price > 0)) {
-            throw new \InvalidArgumentException('invalid value for $unit_price when calling ItemDTO., must be smaller than or equal to 0.');
+            //throw new \InvalidArgumentException('invalid value for $unit_price when calling ItemDTO., must be smaller than or equal to 0.');
         }
         if (($unit_price < 0)) {
-            throw new \InvalidArgumentException('invalid value for $unit_price when calling ItemDTO., must be bigger than or equal to 0.');
+            //throw new \InvalidArgumentException('invalid value for $unit_price when calling ItemDTO., must be bigger than or equal to 0.');
         }
 
         $this->container['unit_price'] = $unit_price;
