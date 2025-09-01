@@ -286,11 +286,11 @@ class PackDTOWeight implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "'weight' can't be null";
         }
         if (($this->container['weight'] > 1.79769)) {
-            $invalidProperties[] = "invalid value for 'weight', must be smaller than or equal to 1.79769.";
+            //$invalidProperties[] = "invalid value for 'weight', must be smaller than or equal to 1.79769.";
         }
 
         if (($this->container['weight'] < -1.79769)) {
-            $invalidProperties[] = "invalid value for 'weight', must be bigger than or equal to -1.79769.";
+            //$invalidProperties[] = "invalid value for 'weight', must be bigger than or equal to -1.79769.";
         }
 
         return $invalidProperties;
@@ -332,10 +332,10 @@ class PackDTOWeight implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($weight > 1.79769)) {
-            throw new \InvalidArgumentException('invalid value for $weight when calling PackDTOWeight., must be smaller than or equal to 0.');
+            //throw new \InvalidArgumentException('invalid value for $weight when calling PackDTOWeight., must be smaller than or equal to 0.');
         }
         if (($weight < -1.79769)) {
-            throw new \InvalidArgumentException('invalid value for $weight when calling PackDTOWeight., must be bigger than or equal to 0.');
+            //throw new \InvalidArgumentException('invalid value for $weight when calling PackDTOWeight., must be bigger than or equal to 0.');
         }
 
         $this->container['weight'] = $weight;
