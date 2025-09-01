@@ -43,6 +43,15 @@ use \BeLenka\Deposco\ObjectSerializer;
  */
 class PackDTO implements ModelInterface, ArrayAccess, \JsonSerializable
 {
+
+    const EACH = 'Each';
+    const CASE = 'Case';
+    const BUNDLE = 'Bundle';
+    const LOOSE = 'Loose';
+    const MILL_UNIT = 'Mill Unit';
+    const OUTER = 'Outer';
+    const UNIT = 'Unit';
+    
     public const DISCRIMINATOR = null;
 
     /**
