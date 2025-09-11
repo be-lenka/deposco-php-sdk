@@ -285,8 +285,8 @@ class BaseOrderLineDTOWeight implements ModelInterface, ArrayAccess, \JsonSerial
         if ($this->container['weight'] === null) {
             $invalidProperties[] = "'weight' can't be null";
         }
-        if (($this->container['weight'] > 0)) {
-            $invalidProperties[] = "invalid value for 'weight', must be smaller than or equal to 0.";
+        if (($this->container['weight'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'weight', must be smaller than or equal to 10000000.";
         }
 
         if (($this->container['weight'] < 0)) {
@@ -332,7 +332,7 @@ class BaseOrderLineDTOWeight implements ModelInterface, ArrayAccess, \JsonSerial
         }
 
         if (($weight > 0)) {
-            throw new \InvalidArgumentException('invalid value for $weight when calling BaseOrderLineDTOWeight., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $weight when calling BaseOrderLineDTOWeight., must be smaller than or equal to 10000000.');
         }
         if (($weight < 0)) {
             throw new \InvalidArgumentException('invalid value for $weight when calling BaseOrderLineDTOWeight., must be bigger than or equal to 0.');

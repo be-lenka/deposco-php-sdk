@@ -1,6 +1,6 @@
 <?php
 /**
- * BaseShipmentLineDTOTotalWeight
+ * BaseShipmentDTOTotalWeight
  *
  * PHP version 7.4
  *
@@ -32,16 +32,16 @@ use \ArrayAccess;
 use \BeLenka\Deposco\ObjectSerializer;
 
 /**
- * BaseShipmentLineDTOTotalWeight Class Doc Comment
+ * BaseShipmentDTOTotalWeight Class Doc Comment
  *
  * @category Class
- * @description Total weight of the shipment line.
+ * @description Total weight of the shipment.
  * @package  BeLenka\Deposco
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class BaseShipmentLineDTOTotalWeight implements ModelInterface, ArrayAccess, \JsonSerializable
+class BaseShipmentDTOTotalWeight implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class BaseShipmentLineDTOTotalWeight implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'BaseShipmentLineDTO_totalWeight';
+    protected static $openAPIModelName = 'BaseShipmentDTO_totalWeight';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -285,13 +285,6 @@ class BaseShipmentLineDTOTotalWeight implements ModelInterface, ArrayAccess, \Js
         if ($this->container['value'] === null) {
             $invalidProperties[] = "'value' can't be null";
         }
-        if (($this->container['value'] > 0)) {
-            $invalidProperties[] = "invalid value for 'value', must be smaller than or equal to 0.";
-        }
-
-        if (($this->container['value'] < 0)) {
-            $invalidProperties[] = "invalid value for 'value', must be bigger than or equal to 0.";
-        }
 
         return $invalidProperties;
     }
@@ -329,13 +322,6 @@ class BaseShipmentLineDTOTotalWeight implements ModelInterface, ArrayAccess, \Js
     {
         if (is_null($value)) {
             throw new \InvalidArgumentException('non-nullable value cannot be null');
-        }
-
-        if (($value > 0)) {
-            throw new \InvalidArgumentException('invalid value for $value when calling BaseShipmentLineDTOTotalWeight., must be smaller than or equal to 0.');
-        }
-        if (($value < 0)) {
-            throw new \InvalidArgumentException('invalid value for $value when calling BaseShipmentLineDTOTotalWeight., must be bigger than or equal to 0.');
         }
 
         $this->container['value'] = $value;

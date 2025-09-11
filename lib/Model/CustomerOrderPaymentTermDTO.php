@@ -395,16 +395,16 @@ class CustomerOrderPaymentTermDTO implements ModelInterface, ArrayAccess, \JsonS
         if ($this->container['net_due_days'] === null) {
             $invalidProperties[] = "'net_due_days' can't be null";
         }
-        if (($this->container['net_due_days'] > 0)) {
-            $invalidProperties[] = "invalid value for 'net_due_days', must be smaller than or equal to 0.";
+        if (($this->container['net_due_days'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'net_due_days', must be smaller than or equal to 10000000.";
         }
 
         if (($this->container['net_due_days'] < 0)) {
             $invalidProperties[] = "invalid value for 'net_due_days', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['discount_rate']) && ($this->container['discount_rate'] > 0)) {
-            $invalidProperties[] = "invalid value for 'discount_rate', must be smaller than or equal to 0.";
+        if (!is_null($this->container['discount_rate']) && ($this->container['discount_rate'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'discount_rate', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['discount_rate']) && ($this->container['discount_rate'] < 0)) {
@@ -414,24 +414,24 @@ class CustomerOrderPaymentTermDTO implements ModelInterface, ArrayAccess, \JsonS
         if ($this->container['discount_amount'] === null) {
             $invalidProperties[] = "'discount_amount' can't be null";
         }
-        if (($this->container['discount_amount'] > 0)) {
-            $invalidProperties[] = "invalid value for 'discount_amount', must be smaller than or equal to 0.";
+        if (($this->container['discount_amount'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'discount_amount', must be smaller than or equal to 10000000.";
         }
 
         if (($this->container['discount_amount'] < 0)) {
             $invalidProperties[] = "invalid value for 'discount_amount', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['discount_percentage']) && ($this->container['discount_percentage'] > 0)) {
-            $invalidProperties[] = "invalid value for 'discount_percentage', must be smaller than or equal to 0.";
+        if (!is_null($this->container['discount_percentage']) && ($this->container['discount_percentage'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'discount_percentage', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['discount_percentage']) && ($this->container['discount_percentage'] < 0)) {
             $invalidProperties[] = "invalid value for 'discount_percentage', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['discount_due_days']) && ($this->container['discount_due_days'] > 0)) {
-            $invalidProperties[] = "invalid value for 'discount_due_days', must be smaller than or equal to 0.";
+        if (!is_null($this->container['discount_due_days']) && ($this->container['discount_due_days'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'discount_due_days', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['discount_due_days']) && ($this->container['discount_due_days'] < 0)) {
@@ -614,7 +614,7 @@ class CustomerOrderPaymentTermDTO implements ModelInterface, ArrayAccess, \JsonS
         }
 
         if (($net_due_days > 0)) {
-            throw new \InvalidArgumentException('invalid value for $net_due_days when calling CustomerOrderPaymentTermDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $net_due_days when calling CustomerOrderPaymentTermDTO., must be smaller than or equal to 10000000.');
         }
         if (($net_due_days < 0)) {
             throw new \InvalidArgumentException('invalid value for $net_due_days when calling CustomerOrderPaymentTermDTO., must be bigger than or equal to 0.');
@@ -710,7 +710,7 @@ class CustomerOrderPaymentTermDTO implements ModelInterface, ArrayAccess, \JsonS
         }
 
         if (($discount_rate > 0)) {
-            throw new \InvalidArgumentException('invalid value for $discount_rate when calling CustomerOrderPaymentTermDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $discount_rate when calling CustomerOrderPaymentTermDTO., must be smaller than or equal to 10000000.');
         }
         if (($discount_rate < 0)) {
             throw new \InvalidArgumentException('invalid value for $discount_rate when calling CustomerOrderPaymentTermDTO., must be bigger than or equal to 0.');
@@ -745,7 +745,7 @@ class CustomerOrderPaymentTermDTO implements ModelInterface, ArrayAccess, \JsonS
         }
 
         if (($discount_amount > 0)) {
-            throw new \InvalidArgumentException('invalid value for $discount_amount when calling CustomerOrderPaymentTermDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $discount_amount when calling CustomerOrderPaymentTermDTO., must be smaller than or equal to 10000000.');
         }
         if (($discount_amount < 0)) {
             throw new \InvalidArgumentException('invalid value for $discount_amount when calling CustomerOrderPaymentTermDTO., must be bigger than or equal to 0.');
@@ -780,7 +780,7 @@ class CustomerOrderPaymentTermDTO implements ModelInterface, ArrayAccess, \JsonS
         }
 
         if (($discount_percentage > 0)) {
-            throw new \InvalidArgumentException('invalid value for $discount_percentage when calling CustomerOrderPaymentTermDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $discount_percentage when calling CustomerOrderPaymentTermDTO., must be smaller than or equal to 10000000.');
         }
         if (($discount_percentage < 0)) {
             throw new \InvalidArgumentException('invalid value for $discount_percentage when calling CustomerOrderPaymentTermDTO., must be bigger than or equal to 0.');
@@ -815,7 +815,7 @@ class CustomerOrderPaymentTermDTO implements ModelInterface, ArrayAccess, \JsonS
         }
 
         if (($discount_due_days > 0)) {
-            throw new \InvalidArgumentException('invalid value for $discount_due_days when calling CustomerOrderPaymentTermDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $discount_due_days when calling CustomerOrderPaymentTermDTO., must be smaller than or equal to 10000000.');
         }
         if (($discount_due_days < 0)) {
             throw new \InvalidArgumentException('invalid value for $discount_due_days when calling CustomerOrderPaymentTermDTO., must be bigger than or equal to 0.');

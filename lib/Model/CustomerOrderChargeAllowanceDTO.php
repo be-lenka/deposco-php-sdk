@@ -391,8 +391,8 @@ class CustomerOrderChargeAllowanceDTO implements ModelInterface, ArrayAccess, \J
         if ($this->container['allow_charge_amount'] === null) {
             $invalidProperties[] = "'allow_charge_amount' can't be null";
         }
-        if (($this->container['allow_charge_amount'] > 0)) {
-            $invalidProperties[] = "invalid value for 'allow_charge_amount', must be smaller than or equal to 0.";
+        if (($this->container['allow_charge_amount'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'allow_charge_amount', must be smaller than or equal to 10000000.";
         }
 
         if (($this->container['allow_charge_amount'] < 0)) {
@@ -407,32 +407,32 @@ class CustomerOrderChargeAllowanceDTO implements ModelInterface, ArrayAccess, \J
             $invalidProperties[] = "invalid value for 'agency_code', the character length must be smaller than or equal to 30.";
         }
 
-        if (!is_null($this->container['allow_charge_percent_basis']) && ($this->container['allow_charge_percent_basis'] > 0)) {
-            $invalidProperties[] = "invalid value for 'allow_charge_percent_basis', must be smaller than or equal to 0.";
+        if (!is_null($this->container['allow_charge_percent_basis']) && ($this->container['allow_charge_percent_basis'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'allow_charge_percent_basis', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['allow_charge_percent_basis']) && ($this->container['allow_charge_percent_basis'] < 0)) {
             $invalidProperties[] = "invalid value for 'allow_charge_percent_basis', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['allow_charge_percent']) && ($this->container['allow_charge_percent'] > 0)) {
-            $invalidProperties[] = "invalid value for 'allow_charge_percent', must be smaller than or equal to 0.";
+        if (!is_null($this->container['allow_charge_percent']) && ($this->container['allow_charge_percent'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'allow_charge_percent', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['allow_charge_percent']) && ($this->container['allow_charge_percent'] < 0)) {
             $invalidProperties[] = "invalid value for 'allow_charge_percent', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['allow_charge_rate']) && ($this->container['allow_charge_rate'] > 0)) {
-            $invalidProperties[] = "invalid value for 'allow_charge_rate', must be smaller than or equal to 0.";
+        if (!is_null($this->container['allow_charge_rate']) && ($this->container['allow_charge_rate'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'allow_charge_rate', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['allow_charge_rate']) && ($this->container['allow_charge_rate'] < 0)) {
             $invalidProperties[] = "invalid value for 'allow_charge_rate', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['allow_charge_qty']) && ($this->container['allow_charge_qty'] > 0)) {
-            $invalidProperties[] = "invalid value for 'allow_charge_qty', must be smaller than or equal to 0.";
+        if (!is_null($this->container['allow_charge_qty']) && ($this->container['allow_charge_qty'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'allow_charge_qty', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['allow_charge_qty']) && ($this->container['allow_charge_qty'] < 0)) {
@@ -581,7 +581,7 @@ class CustomerOrderChargeAllowanceDTO implements ModelInterface, ArrayAccess, \J
         }
 
         if (($allow_charge_amount > 0)) {
-            throw new \InvalidArgumentException('invalid value for $allow_charge_amount when calling CustomerOrderChargeAllowanceDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $allow_charge_amount when calling CustomerOrderChargeAllowanceDTO., must be smaller than or equal to 10000000.');
         }
         if (($allow_charge_amount < 0)) {
             throw new \InvalidArgumentException('invalid value for $allow_charge_amount when calling CustomerOrderChargeAllowanceDTO., must be bigger than or equal to 0.');
@@ -699,7 +699,7 @@ class CustomerOrderChargeAllowanceDTO implements ModelInterface, ArrayAccess, \J
         }
 
         if (!is_null($allow_charge_percent_basis) && ($allow_charge_percent_basis > 0)) {
-            throw new \InvalidArgumentException('invalid value for $allow_charge_percent_basis when calling CustomerOrderChargeAllowanceDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $allow_charge_percent_basis when calling CustomerOrderChargeAllowanceDTO., must be smaller than or equal to 10000000.');
         }
         if (!is_null($allow_charge_percent_basis) && ($allow_charge_percent_basis < 0)) {
             throw new \InvalidArgumentException('invalid value for $allow_charge_percent_basis when calling CustomerOrderChargeAllowanceDTO., must be bigger than or equal to 0.');
@@ -741,7 +741,7 @@ class CustomerOrderChargeAllowanceDTO implements ModelInterface, ArrayAccess, \J
         }
 
         if (!is_null($allow_charge_percent) && ($allow_charge_percent > 0)) {
-            throw new \InvalidArgumentException('invalid value for $allow_charge_percent when calling CustomerOrderChargeAllowanceDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $allow_charge_percent when calling CustomerOrderChargeAllowanceDTO., must be smaller than or equal to 10000000.');
         }
         if (!is_null($allow_charge_percent) && ($allow_charge_percent < 0)) {
             throw new \InvalidArgumentException('invalid value for $allow_charge_percent when calling CustomerOrderChargeAllowanceDTO., must be bigger than or equal to 0.');
@@ -783,7 +783,7 @@ class CustomerOrderChargeAllowanceDTO implements ModelInterface, ArrayAccess, \J
         }
 
         if (!is_null($allow_charge_rate) && ($allow_charge_rate > 0)) {
-            throw new \InvalidArgumentException('invalid value for $allow_charge_rate when calling CustomerOrderChargeAllowanceDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $allow_charge_rate when calling CustomerOrderChargeAllowanceDTO., must be smaller than or equal to 10000000.');
         }
         if (!is_null($allow_charge_rate) && ($allow_charge_rate < 0)) {
             throw new \InvalidArgumentException('invalid value for $allow_charge_rate when calling CustomerOrderChargeAllowanceDTO., must be bigger than or equal to 0.');
@@ -825,7 +825,7 @@ class CustomerOrderChargeAllowanceDTO implements ModelInterface, ArrayAccess, \J
         }
 
         if (!is_null($allow_charge_qty) && ($allow_charge_qty > 0)) {
-            throw new \InvalidArgumentException('invalid value for $allow_charge_qty when calling CustomerOrderChargeAllowanceDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $allow_charge_qty when calling CustomerOrderChargeAllowanceDTO., must be smaller than or equal to 10000000.');
         }
         if (!is_null($allow_charge_qty) && ($allow_charge_qty < 0)) {
             throw new \InvalidArgumentException('invalid value for $allow_charge_qty when calling CustomerOrderChargeAllowanceDTO., must be bigger than or equal to 0.');

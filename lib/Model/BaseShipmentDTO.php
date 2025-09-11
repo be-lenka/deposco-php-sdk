@@ -891,8 +891,8 @@ class BaseShipmentDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'container_type', the character length must be smaller than or equal to 50.";
         }
 
-        if (!is_null($this->container['total_pieces']) && ($this->container['total_pieces'] > 0)) {
-            $invalidProperties[] = "invalid value for 'total_pieces', must be smaller than or equal to 0.";
+        if (!is_null($this->container['total_pieces']) && ($this->container['total_pieces'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'total_pieces', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['total_pieces']) && ($this->container['total_pieces'] < 0)) {
@@ -951,8 +951,8 @@ class BaseShipmentDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'hub_id', the character length must be smaller than or equal to 10.";
         }
 
-        if (!is_null($this->container['cod_amount']) && ($this->container['cod_amount'] > 0)) {
-            $invalidProperties[] = "invalid value for 'cod_amount', must be smaller than or equal to 0.";
+        if (!is_null($this->container['cod_amount']) && ($this->container['cod_amount'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'cod_amount', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['cod_amount']) && ($this->container['cod_amount'] < 0)) {
@@ -968,8 +968,8 @@ class BaseShipmentDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             );
         }
 
-        if (!is_null($this->container['total_distance']) && ($this->container['total_distance'] > 0)) {
-            $invalidProperties[] = "invalid value for 'total_distance', must be smaller than or equal to 0.";
+        if (!is_null($this->container['total_distance']) && ($this->container['total_distance'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'total_distance', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['total_distance']) && ($this->container['total_distance'] < 0)) {
@@ -1982,7 +1982,7 @@ class BaseShipmentDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($total_pieces > 0)) {
-            throw new \InvalidArgumentException('invalid value for $total_pieces when calling BaseShipmentDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $total_pieces when calling BaseShipmentDTO., must be smaller than or equal to 10000000.');
         }
         if (($total_pieces < 0)) {
             throw new \InvalidArgumentException('invalid value for $total_pieces when calling BaseShipmentDTO., must be bigger than or equal to 0.');
@@ -2582,7 +2582,7 @@ class BaseShipmentDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($cod_amount > 0)) {
-            throw new \InvalidArgumentException('invalid value for $cod_amount when calling BaseShipmentDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $cod_amount when calling BaseShipmentDTO., must be smaller than or equal to 10000000.');
         }
         if (($cod_amount < 0)) {
             throw new \InvalidArgumentException('invalid value for $cod_amount when calling BaseShipmentDTO., must be bigger than or equal to 0.');
@@ -2870,7 +2870,7 @@ class BaseShipmentDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($total_distance > 0)) {
-            throw new \InvalidArgumentException('invalid value for $total_distance when calling BaseShipmentDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $total_distance when calling BaseShipmentDTO., must be smaller than or equal to 10000000.');
         }
         if (($total_distance < 0)) {
             throw new \InvalidArgumentException('invalid value for $total_distance when calling BaseShipmentDTO., must be bigger than or equal to 0.');

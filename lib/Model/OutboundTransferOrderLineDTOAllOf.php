@@ -413,40 +413,40 @@ class OutboundTransferOrderLineDTOAllOf implements ModelInterface, ArrayAccess, 
             );
         }
 
-        if (!is_null($this->container['allocated_quantity']) && ($this->container['allocated_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'allocated_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['allocated_quantity']) && ($this->container['allocated_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'allocated_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['allocated_quantity']) && ($this->container['allocated_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'allocated_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['unallocated_quantity']) && ($this->container['unallocated_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'unallocated_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['unallocated_quantity']) && ($this->container['unallocated_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'unallocated_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['unallocated_quantity']) && ($this->container['unallocated_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'unallocated_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['picked_pack_quantity']) && ($this->container['picked_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'picked_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['picked_pack_quantity']) && ($this->container['picked_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'picked_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['picked_pack_quantity']) && ($this->container['picked_pack_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'picked_pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shortage_pack_quantity']) && ($this->container['shortage_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shortage_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shortage_pack_quantity']) && ($this->container['shortage_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shortage_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shortage_pack_quantity']) && ($this->container['shortage_pack_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'shortage_pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] < 0)) {
@@ -606,7 +606,7 @@ class OutboundTransferOrderLineDTOAllOf implements ModelInterface, ArrayAccess, 
         }
 
         if (($allocated_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $allocated_quantity when calling OutboundTransferOrderLineDTOAllOf., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $allocated_quantity when calling OutboundTransferOrderLineDTOAllOf., must be smaller than or equal to 10000000.');
         }
         if (($allocated_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $allocated_quantity when calling OutboundTransferOrderLineDTOAllOf., must be bigger than or equal to 0.');
@@ -641,7 +641,7 @@ class OutboundTransferOrderLineDTOAllOf implements ModelInterface, ArrayAccess, 
         }
 
         if (($unallocated_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $unallocated_quantity when calling OutboundTransferOrderLineDTOAllOf., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $unallocated_quantity when calling OutboundTransferOrderLineDTOAllOf., must be smaller than or equal to 10000000.');
         }
         if (($unallocated_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $unallocated_quantity when calling OutboundTransferOrderLineDTOAllOf., must be bigger than or equal to 0.');
@@ -676,7 +676,7 @@ class OutboundTransferOrderLineDTOAllOf implements ModelInterface, ArrayAccess, 
         }
 
         if (($picked_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $picked_pack_quantity when calling OutboundTransferOrderLineDTOAllOf., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $picked_pack_quantity when calling OutboundTransferOrderLineDTOAllOf., must be smaller than or equal to 10000000.');
         }
         if (($picked_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $picked_pack_quantity when calling OutboundTransferOrderLineDTOAllOf., must be bigger than or equal to 0.');
@@ -711,7 +711,7 @@ class OutboundTransferOrderLineDTOAllOf implements ModelInterface, ArrayAccess, 
         }
 
         if (($shortage_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shortage_pack_quantity when calling OutboundTransferOrderLineDTOAllOf., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shortage_pack_quantity when calling OutboundTransferOrderLineDTOAllOf., must be smaller than or equal to 10000000.');
         }
         if (($shortage_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $shortage_pack_quantity when calling OutboundTransferOrderLineDTOAllOf., must be bigger than or equal to 0.');
@@ -746,7 +746,7 @@ class OutboundTransferOrderLineDTOAllOf implements ModelInterface, ArrayAccess, 
         }
 
         if (($shipped_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling OutboundTransferOrderLineDTOAllOf., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling OutboundTransferOrderLineDTOAllOf., must be smaller than or equal to 10000000.');
         }
         if (($shipped_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling OutboundTransferOrderLineDTOAllOf., must be bigger than or equal to 0.');

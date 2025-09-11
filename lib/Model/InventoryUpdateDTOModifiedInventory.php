@@ -391,8 +391,8 @@ class InventoryUpdateDTOModifiedInventory implements ModelInterface, ArrayAccess
             );
         }
 
-        if (!is_null($this->container['unit_price']) && ($this->container['unit_price'] > 0)) {
-            $invalidProperties[] = "invalid value for 'unit_price', must be smaller than or equal to 0.";
+        if (!is_null($this->container['unit_price']) && ($this->container['unit_price'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'unit_price', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['unit_price']) && ($this->container['unit_price'] < 0)) {
@@ -591,7 +591,7 @@ class InventoryUpdateDTOModifiedInventory implements ModelInterface, ArrayAccess
         }
 
         if (($unit_price > 0)) {
-            throw new \InvalidArgumentException('invalid value for $unit_price when calling InventoryUpdateDTOModifiedInventory., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $unit_price when calling InventoryUpdateDTOModifiedInventory., must be smaller than or equal to 10000000.');
         }
         if (($unit_price < 0)) {
             throw new \InvalidArgumentException('invalid value for $unit_price when calling InventoryUpdateDTOModifiedInventory., must be bigger than or equal to 0.');

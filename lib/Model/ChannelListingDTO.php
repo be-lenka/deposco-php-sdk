@@ -466,16 +466,16 @@ class ChannelListingDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
         if ($this->container['pack_quantity'] === null) {
             $invalidProperties[] = "'pack_quantity' can't be null";
         }
-        if (($this->container['pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'pack_quantity', must be smaller than or equal to 0.";
+        if (($this->container['pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (($this->container['pack_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['listing_price']) && ($this->container['listing_price'] > 0)) {
-            $invalidProperties[] = "invalid value for 'listing_price', must be smaller than or equal to 0.";
+        if (!is_null($this->container['listing_price']) && ($this->container['listing_price'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'listing_price', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['listing_price']) && ($this->container['listing_price'] < 0)) {
@@ -653,7 +653,7 @@ class ChannelListingDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
         }
 
         if (($pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $pack_quantity when calling ChannelListingDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $pack_quantity when calling ChannelListingDTO., must be smaller than or equal to 10000000.');
         }
         if (($pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $pack_quantity when calling ChannelListingDTO., must be bigger than or equal to 0.');
@@ -729,7 +729,7 @@ class ChannelListingDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
         }
 
         if (!is_null($listing_price) && ($listing_price > 0)) {
-            throw new \InvalidArgumentException('invalid value for $listing_price when calling ChannelListingDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $listing_price when calling ChannelListingDTO., must be smaller than or equal to 10000000.');
         }
         if (!is_null($listing_price) && ($listing_price < 0)) {
             throw new \InvalidArgumentException('invalid value for $listing_price when calling ChannelListingDTO., must be bigger than or equal to 0.');

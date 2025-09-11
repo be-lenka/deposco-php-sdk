@@ -332,16 +332,16 @@ class CustomerReturnLineDTOAllOf implements ModelInterface, ArrayAccess, \JsonSe
             );
         }
 
-        if (!is_null($this->container['received_pack_quantity']) && ($this->container['received_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'received_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['received_pack_quantity']) && ($this->container['received_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'received_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['received_pack_quantity']) && ($this->container['received_pack_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'received_pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['received_damaged_pack_quantity']) && ($this->container['received_damaged_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'received_damaged_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['received_damaged_pack_quantity']) && ($this->container['received_damaged_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'received_damaged_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['received_damaged_pack_quantity']) && ($this->container['received_damaged_pack_quantity'] < 0)) {
@@ -499,7 +499,7 @@ class CustomerReturnLineDTOAllOf implements ModelInterface, ArrayAccess, \JsonSe
         }
 
         if (($received_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $received_pack_quantity when calling CustomerReturnLineDTOAllOf., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $received_pack_quantity when calling CustomerReturnLineDTOAllOf., must be smaller than or equal to 10000000.');
         }
         if (($received_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $received_pack_quantity when calling CustomerReturnLineDTOAllOf., must be bigger than or equal to 0.');
@@ -534,7 +534,7 @@ class CustomerReturnLineDTOAllOf implements ModelInterface, ArrayAccess, \JsonSe
         }
 
         if (($received_damaged_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $received_damaged_pack_quantity when calling CustomerReturnLineDTOAllOf., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $received_damaged_pack_quantity when calling CustomerReturnLineDTOAllOf., must be smaller than or equal to 10000000.');
         }
         if (($received_damaged_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $received_damaged_pack_quantity when calling CustomerReturnLineDTOAllOf., must be bigger than or equal to 0.');

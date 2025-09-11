@@ -282,8 +282,8 @@ class CustomerOrderDTOWeight implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['weight']) && ($this->container['weight'] > 0)) {
-            $invalidProperties[] = "invalid value for 'weight', must be smaller than or equal to 0.";
+        if (!is_null($this->container['weight']) && ($this->container['weight'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'weight', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['weight']) && ($this->container['weight'] < 0)) {
@@ -329,7 +329,7 @@ class CustomerOrderDTOWeight implements ModelInterface, ArrayAccess, \JsonSerial
         }
 
         if (($weight > 0)) {
-            throw new \InvalidArgumentException('invalid value for $weight when calling CustomerOrderDTOWeight., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $weight when calling CustomerOrderDTOWeight., must be smaller than or equal to 10000000.');
         }
         if (($weight < 0)) {
             throw new \InvalidArgumentException('invalid value for $weight when calling CustomerOrderDTOWeight., must be bigger than or equal to 0.');

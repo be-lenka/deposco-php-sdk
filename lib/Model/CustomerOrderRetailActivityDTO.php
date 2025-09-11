@@ -474,8 +474,8 @@ class CustomerOrderRetailActivityDTO implements ModelInterface, ArrayAccess, \Js
             $invalidProperties[] = "invalid value for 'batch', the character length must be smaller than or equal to 50.";
         }
 
-        if (!is_null($this->container['batch_sequence_number']) && ($this->container['batch_sequence_number'] > 0)) {
-            $invalidProperties[] = "invalid value for 'batch_sequence_number', must be smaller than or equal to 0.";
+        if (!is_null($this->container['batch_sequence_number']) && ($this->container['batch_sequence_number'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'batch_sequence_number', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['batch_sequence_number']) && ($this->container['batch_sequence_number'] < 0)) {
@@ -733,7 +733,7 @@ class CustomerOrderRetailActivityDTO implements ModelInterface, ArrayAccess, \Js
         }
 
         if (($batch_sequence_number > 0)) {
-            throw new \InvalidArgumentException('invalid value for $batch_sequence_number when calling CustomerOrderRetailActivityDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $batch_sequence_number when calling CustomerOrderRetailActivityDTO., must be smaller than or equal to 10000000.');
         }
         if (($batch_sequence_number < 0)) {
             throw new \InvalidArgumentException('invalid value for $batch_sequence_number when calling CustomerOrderRetailActivityDTO., must be bigger than or equal to 0.');

@@ -688,8 +688,8 @@ class CarrierSpecialServiceDTO implements ModelInterface, ArrayAccess, \JsonSeri
             $invalidProperties[] = "invalid value for 'commodity_regulations', the character length must be bigger than or equal to 1.";
         }
 
-        if (!is_null($this->container['dangerous_goods_amount']) && ($this->container['dangerous_goods_amount'] > 0)) {
-            $invalidProperties[] = "invalid value for 'dangerous_goods_amount', must be smaller than or equal to 0.";
+        if (!is_null($this->container['dangerous_goods_amount']) && ($this->container['dangerous_goods_amount'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'dangerous_goods_amount', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['dangerous_goods_amount']) && ($this->container['dangerous_goods_amount'] < 0)) {
@@ -704,8 +704,8 @@ class CarrierSpecialServiceDTO implements ModelInterface, ArrayAccess, \JsonSeri
             $invalidProperties[] = "invalid value for 'dangerous_goods_uom', the character length must be bigger than or equal to 1.";
         }
 
-        if (!is_null($this->container['hazard_class']) && ($this->container['hazard_class'] > 0)) {
-            $invalidProperties[] = "invalid value for 'hazard_class', must be smaller than or equal to 0.";
+        if (!is_null($this->container['hazard_class']) && ($this->container['hazard_class'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'hazard_class', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['hazard_class']) && ($this->container['hazard_class'] < 0)) {
@@ -1351,7 +1351,7 @@ class CarrierSpecialServiceDTO implements ModelInterface, ArrayAccess, \JsonSeri
         }
 
         if (!is_null($dangerous_goods_amount) && ($dangerous_goods_amount > 0)) {
-            throw new \InvalidArgumentException('invalid value for $dangerous_goods_amount when calling CarrierSpecialServiceDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $dangerous_goods_amount when calling CarrierSpecialServiceDTO., must be smaller than or equal to 10000000.');
         }
         if (!is_null($dangerous_goods_amount) && ($dangerous_goods_amount < 0)) {
             throw new \InvalidArgumentException('invalid value for $dangerous_goods_amount when calling CarrierSpecialServiceDTO., must be bigger than or equal to 0.');
@@ -1434,7 +1434,7 @@ class CarrierSpecialServiceDTO implements ModelInterface, ArrayAccess, \JsonSeri
         }
 
         if (!is_null($hazard_class) && ($hazard_class > 0)) {
-            throw new \InvalidArgumentException('invalid value for $hazard_class when calling CarrierSpecialServiceDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $hazard_class when calling CarrierSpecialServiceDTO., must be smaller than or equal to 10000000.');
         }
         if (!is_null($hazard_class) && ($hazard_class < 0)) {
             throw new \InvalidArgumentException('invalid value for $hazard_class when calling CarrierSpecialServiceDTO., must be bigger than or equal to 0.');

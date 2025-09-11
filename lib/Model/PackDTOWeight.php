@@ -332,7 +332,7 @@ class PackDTOWeight implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($weight > 1.79769)) {
-            //throw new \InvalidArgumentException('invalid value for $weight when calling PackDTOWeight., must be smaller than or equal to 0.');
+            //throw new \InvalidArgumentException('invalid value for $weight when calling PackDTOWeight., must be smaller than or equal to 10000000.');
         }
         if (($weight < -1.79769)) {
             //throw new \InvalidArgumentException('invalid value for $weight when calling PackDTOWeight., must be bigger than or equal to 0.');

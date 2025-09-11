@@ -1061,8 +1061,8 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         if ($this->container['order_quantity'] === null) {
             $invalidProperties[] = "'order_quantity' can't be null";
         }
-        if (($this->container['order_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'order_quantity', must be smaller than or equal to 0.";
+        if (($this->container['order_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'order_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (($this->container['order_quantity'] <= 0)) {
@@ -1076,120 +1076,120 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
             $invalidProperties[] = "invalid value for 'pack_quantity', must be bigger than or equal to 1.";
         }
 
-        if (!is_null($this->container['original_order_quantity']) && ($this->container['original_order_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'original_order_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['original_order_quantity']) && ($this->container['original_order_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'original_order_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['original_order_quantity']) && ($this->container['original_order_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'original_order_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['allocated_quantity']) && ($this->container['allocated_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'allocated_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['allocated_quantity']) && ($this->container['allocated_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'allocated_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['allocated_quantity']) && ($this->container['allocated_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'allocated_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['back_order_quantity']) && ($this->container['back_order_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'back_order_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['back_order_quantity']) && ($this->container['back_order_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'back_order_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['back_order_quantity']) && ($this->container['back_order_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'back_order_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shipped_quantity']) && ($this->container['shipped_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipped_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shipped_quantity']) && ($this->container['shipped_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shipped_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shipped_quantity']) && ($this->container['shipped_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'shipped_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['returned_quantity']) && ($this->container['returned_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'returned_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['returned_quantity']) && ($this->container['returned_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'returned_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['returned_quantity']) && ($this->container['returned_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'returned_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['canceled_quantity']) && ($this->container['canceled_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'canceled_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['canceled_quantity']) && ($this->container['canceled_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'canceled_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['canceled_quantity']) && ($this->container['canceled_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'canceled_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['unit_cost']) && ($this->container['unit_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'unit_cost', must be smaller than or equal to 0.";
+        if (!is_null($this->container['unit_cost']) && ($this->container['unit_cost'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'unit_cost', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['unit_cost']) && ($this->container['unit_cost'] < 0)) {
             $invalidProperties[] = "invalid value for 'unit_cost', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['unit_price']) && ($this->container['unit_price'] > 0)) {
-            $invalidProperties[] = "invalid value for 'unit_price', must be smaller than or equal to 0.";
+        if (!is_null($this->container['unit_price']) && ($this->container['unit_price'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'unit_price', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['unit_price']) && ($this->container['unit_price'] < 0)) {
             $invalidProperties[] = "invalid value for 'unit_price', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['net_price']) && ($this->container['net_price'] > 0)) {
-            $invalidProperties[] = "invalid value for 'net_price', must be smaller than or equal to 0.";
+        if (!is_null($this->container['net_price']) && ($this->container['net_price'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'net_price', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['net_price']) && ($this->container['net_price'] < 0)) {
             $invalidProperties[] = "invalid value for 'net_price', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['line_total']) && ($this->container['line_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'line_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['line_total']) && ($this->container['line_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'line_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['line_total']) && ($this->container['line_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'line_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shipping_amount']) && ($this->container['shipping_amount'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipping_amount', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shipping_amount']) && ($this->container['shipping_amount'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shipping_amount', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shipping_amount']) && ($this->container['shipping_amount'] < 0)) {
             $invalidProperties[] = "invalid value for 'shipping_amount', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['discount_amount']) && ($this->container['discount_amount'] > 0)) {
-            $invalidProperties[] = "invalid value for 'discount_amount', must be smaller than or equal to 0.";
+        if (!is_null($this->container['discount_amount']) && ($this->container['discount_amount'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'discount_amount', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['discount_amount']) && ($this->container['discount_amount'] < 0)) {
             $invalidProperties[] = "invalid value for 'discount_amount', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['taxable_total']) && ($this->container['taxable_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'taxable_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['taxable_total']) && ($this->container['taxable_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'taxable_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['taxable_total']) && ($this->container['taxable_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'taxable_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['tax_amount']) && ($this->container['tax_amount'] > 0)) {
-            $invalidProperties[] = "invalid value for 'tax_amount', must be smaller than or equal to 0.";
+        if (!is_null($this->container['tax_amount']) && ($this->container['tax_amount'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'tax_amount', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['tax_amount']) && ($this->container['tax_amount'] < 0)) {
             $invalidProperties[] = "invalid value for 'tax_amount', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['extended_total']) && ($this->container['extended_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'extended_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['extended_total']) && ($this->container['extended_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'extended_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['extended_total']) && ($this->container['extended_total'] < 0)) {
@@ -2285,7 +2285,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($order_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $order_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($order_quantity <= 0)) {
             throw new \InvalidArgumentException('invalid value for $order_quantity when calling CustomerOrderLineDTO., must be bigger than 0.');
@@ -2352,7 +2352,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($original_order_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $original_order_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $original_order_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($original_order_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $original_order_quantity when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2387,7 +2387,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($allocated_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $allocated_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $allocated_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($allocated_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $allocated_quantity when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2449,7 +2449,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($back_order_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $back_order_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $back_order_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($back_order_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $back_order_quantity when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2484,7 +2484,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($shipped_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shipped_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($shipped_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $shipped_quantity when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2519,7 +2519,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($returned_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $returned_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $returned_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($returned_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $returned_quantity when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2554,7 +2554,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($canceled_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $canceled_quantity when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($canceled_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $canceled_quantity when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2589,7 +2589,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($unit_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $unit_cost when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $unit_cost when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($unit_cost < 0)) {
             throw new \InvalidArgumentException('invalid value for $unit_cost when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2624,7 +2624,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($unit_price > 0)) {
-            throw new \InvalidArgumentException('invalid value for $unit_price when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $unit_price when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($unit_price < 0)) {
             throw new \InvalidArgumentException('invalid value for $unit_price when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2659,7 +2659,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($net_price > 0)) {
-            throw new \InvalidArgumentException('invalid value for $net_price when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $net_price when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($net_price < 0)) {
             throw new \InvalidArgumentException('invalid value for $net_price when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2694,7 +2694,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($line_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $line_total when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $line_total when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($line_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $line_total when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2729,7 +2729,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($shipping_amount > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipping_amount when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shipping_amount when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($shipping_amount < 0)) {
             throw new \InvalidArgumentException('invalid value for $shipping_amount when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2764,7 +2764,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($discount_amount > 0)) {
-            throw new \InvalidArgumentException('invalid value for $discount_amount when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $discount_amount when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($discount_amount < 0)) {
             throw new \InvalidArgumentException('invalid value for $discount_amount when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2826,7 +2826,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($taxable_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $taxable_total when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $taxable_total when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($taxable_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $taxable_total when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2861,7 +2861,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($tax_amount > 0)) {
-            throw new \InvalidArgumentException('invalid value for $tax_amount when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $tax_amount when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($tax_amount < 0)) {
             throw new \InvalidArgumentException('invalid value for $tax_amount when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');
@@ -2896,7 +2896,7 @@ class CustomerOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         if (($extended_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $extended_total when calling CustomerOrderLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $extended_total when calling CustomerOrderLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($extended_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $extended_total when calling CustomerOrderLineDTO., must be bigger than or equal to 0.');

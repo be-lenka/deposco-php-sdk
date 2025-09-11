@@ -577,84 +577,8 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
             $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 500.";
         }
 
-        if (!is_null($this->container['order_pack_quantity']) && ($this->container['order_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['order_pack_quantity']) && ($this->container['order_pack_quantity'] < 0)) {
-            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] < 0)) {
-            $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['damaged_pack_quantity']) && ($this->container['damaged_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'damaged_pack_quantity', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['damaged_pack_quantity']) && ($this->container['damaged_pack_quantity'] < 0)) {
-            $invalidProperties[] = "invalid value for 'damaged_pack_quantity', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['shipped_damaged_pack_quantity']) && ($this->container['shipped_damaged_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipped_damaged_pack_quantity', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['shipped_damaged_pack_quantity']) && ($this->container['shipped_damaged_pack_quantity'] < 0)) {
-            $invalidProperties[] = "invalid value for 'shipped_damaged_pack_quantity', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['returned_pack_quantity']) && ($this->container['returned_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'returned_pack_quantity', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['returned_pack_quantity']) && ($this->container['returned_pack_quantity'] < 0)) {
-            $invalidProperties[] = "invalid value for 'returned_pack_quantity', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] < 0)) {
-            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['shortage_pack_quantity']) && ($this->container['shortage_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shortage_pack_quantity', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['shortage_pack_quantity']) && ($this->container['shortage_pack_quantity'] < 0)) {
-            $invalidProperties[] = "invalid value for 'shortage_pack_quantity', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['picked_pack_quantity']) && ($this->container['picked_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'picked_pack_quantity', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['picked_pack_quantity']) && ($this->container['picked_pack_quantity'] < 0)) {
-            $invalidProperties[] = "invalid value for 'picked_pack_quantity', must be bigger than or equal to 0.";
-        }
-
         if (!is_null($this->container['package_count']) && ($this->container['package_count'] > 2147483647)) {
             $invalidProperties[] = "invalid value for 'package_count', must be smaller than or equal to 2147483647.";
-        }
-
-        if (!is_null($this->container['package_count']) && ($this->container['package_count'] < -2147483648)) {
-            $invalidProperties[] = "invalid value for 'package_count', must be bigger than or equal to -2147483648.";
-        }
-
-        if (!is_null($this->container['piece_count']) && ($this->container['piece_count'] > 0)) {
-            $invalidProperties[] = "invalid value for 'piece_count', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['piece_count']) && ($this->container['piece_count'] < 0)) {
-            $invalidProperties[] = "invalid value for 'piece_count', must be bigger than or equal to 0.";
         }
 
         if (!is_null($this->container['lot_number']) && (mb_strlen($this->container['lot_number']) > 200)) {
@@ -671,30 +595,6 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
 
         if (!is_null($this->container['inventory_attribute2']) && (mb_strlen($this->container['inventory_attribute2']) > 255)) {
             $invalidProperties[] = "invalid value for 'inventory_attribute2', the character length must be smaller than or equal to 255.";
-        }
-
-        if (!is_null($this->container['unit_cost']) && ($this->container['unit_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'unit_cost', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['unit_cost']) && ($this->container['unit_cost'] < 0)) {
-            $invalidProperties[] = "invalid value for 'unit_cost', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['freight_cost']) && ($this->container['freight_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'freight_cost', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['freight_cost']) && ($this->container['freight_cost'] < 0)) {
-            $invalidProperties[] = "invalid value for 'freight_cost', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['tax_cost']) && ($this->container['tax_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'tax_cost', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['tax_cost']) && ($this->container['tax_cost'] < 0)) {
-            $invalidProperties[] = "invalid value for 'tax_cost', must be bigger than or equal to 0.";
         }
 
         if (!is_null($this->container['external_line_number']) && (mb_strlen($this->container['external_line_number']) > 50)) {
@@ -1083,13 +983,6 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
             throw new \InvalidArgumentException('non-nullable order_pack_quantity cannot be null');
         }
 
-        if (($order_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_pack_quantity when calling OutboundShipmentLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($order_pack_quantity < 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_pack_quantity when calling OutboundShipmentLineDTO., must be bigger than or equal to 0.');
-        }
-
         $this->container['order_pack_quantity'] = $order_pack_quantity;
 
         return $this;
@@ -1116,13 +1009,6 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
     {
         if (is_null($shipped_pack_quantity)) {
             throw new \InvalidArgumentException('non-nullable shipped_pack_quantity cannot be null');
-        }
-
-        if (($shipped_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling OutboundShipmentLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($shipped_pack_quantity < 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling OutboundShipmentLineDTO., must be bigger than or equal to 0.');
         }
 
         $this->container['shipped_pack_quantity'] = $shipped_pack_quantity;
@@ -1153,13 +1039,6 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
             throw new \InvalidArgumentException('non-nullable damaged_pack_quantity cannot be null');
         }
 
-        if (($damaged_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $damaged_pack_quantity when calling OutboundShipmentLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($damaged_pack_quantity < 0)) {
-            throw new \InvalidArgumentException('invalid value for $damaged_pack_quantity when calling OutboundShipmentLineDTO., must be bigger than or equal to 0.');
-        }
-
         $this->container['damaged_pack_quantity'] = $damaged_pack_quantity;
 
         return $this;
@@ -1186,13 +1065,6 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
     {
         if (is_null($shipped_damaged_pack_quantity)) {
             throw new \InvalidArgumentException('non-nullable shipped_damaged_pack_quantity cannot be null');
-        }
-
-        if (($shipped_damaged_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_damaged_pack_quantity when calling OutboundShipmentLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($shipped_damaged_pack_quantity < 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_damaged_pack_quantity when calling OutboundShipmentLineDTO., must be bigger than or equal to 0.');
         }
 
         $this->container['shipped_damaged_pack_quantity'] = $shipped_damaged_pack_quantity;
@@ -1223,13 +1095,6 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
             throw new \InvalidArgumentException('non-nullable returned_pack_quantity cannot be null');
         }
 
-        if (($returned_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $returned_pack_quantity when calling OutboundShipmentLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($returned_pack_quantity < 0)) {
-            throw new \InvalidArgumentException('invalid value for $returned_pack_quantity when calling OutboundShipmentLineDTO., must be bigger than or equal to 0.');
-        }
-
         $this->container['returned_pack_quantity'] = $returned_pack_quantity;
 
         return $this;
@@ -1256,13 +1121,6 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
     {
         if (is_null($canceled_pack_quantity)) {
             throw new \InvalidArgumentException('non-nullable canceled_pack_quantity cannot be null');
-        }
-
-        if (($canceled_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling OutboundShipmentLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($canceled_pack_quantity < 0)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling OutboundShipmentLineDTO., must be bigger than or equal to 0.');
         }
 
         $this->container['canceled_pack_quantity'] = $canceled_pack_quantity;
@@ -1293,13 +1151,6 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
             throw new \InvalidArgumentException('non-nullable shortage_pack_quantity cannot be null');
         }
 
-        if (($shortage_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shortage_pack_quantity when calling OutboundShipmentLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($shortage_pack_quantity < 0)) {
-            throw new \InvalidArgumentException('invalid value for $shortage_pack_quantity when calling OutboundShipmentLineDTO., must be bigger than or equal to 0.');
-        }
-
         $this->container['shortage_pack_quantity'] = $shortage_pack_quantity;
 
         return $this;
@@ -1326,13 +1177,6 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
     {
         if (is_null($picked_pack_quantity)) {
             throw new \InvalidArgumentException('non-nullable picked_pack_quantity cannot be null');
-        }
-
-        if (($picked_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $picked_pack_quantity when calling OutboundShipmentLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($picked_pack_quantity < 0)) {
-            throw new \InvalidArgumentException('invalid value for $picked_pack_quantity when calling OutboundShipmentLineDTO., must be bigger than or equal to 0.');
         }
 
         $this->container['picked_pack_quantity'] = $picked_pack_quantity;
@@ -1396,13 +1240,6 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
     {
         if (is_null($piece_count)) {
             throw new \InvalidArgumentException('non-nullable piece_count cannot be null');
-        }
-
-        if (($piece_count > 0)) {
-            throw new \InvalidArgumentException('invalid value for $piece_count when calling OutboundShipmentLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($piece_count < 0)) {
-            throw new \InvalidArgumentException('invalid value for $piece_count when calling OutboundShipmentLineDTO., must be bigger than or equal to 0.');
         }
 
         $this->container['piece_count'] = $piece_count;
@@ -1692,13 +1529,6 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
             throw new \InvalidArgumentException('non-nullable unit_cost cannot be null');
         }
 
-        if (($unit_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $unit_cost when calling OutboundShipmentLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($unit_cost < 0)) {
-            throw new \InvalidArgumentException('invalid value for $unit_cost when calling OutboundShipmentLineDTO., must be bigger than or equal to 0.');
-        }
-
         $this->container['unit_cost'] = $unit_cost;
 
         return $this;
@@ -1727,13 +1557,6 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
             throw new \InvalidArgumentException('non-nullable freight_cost cannot be null');
         }
 
-        if (($freight_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $freight_cost when calling OutboundShipmentLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($freight_cost < 0)) {
-            throw new \InvalidArgumentException('invalid value for $freight_cost when calling OutboundShipmentLineDTO., must be bigger than or equal to 0.');
-        }
-
         $this->container['freight_cost'] = $freight_cost;
 
         return $this;
@@ -1760,13 +1583,6 @@ class OutboundShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSeria
     {
         if (is_null($tax_cost)) {
             throw new \InvalidArgumentException('non-nullable tax_cost cannot be null');
-        }
-
-        if (($tax_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $tax_cost when calling OutboundShipmentLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($tax_cost < 0)) {
-            throw new \InvalidArgumentException('invalid value for $tax_cost when calling OutboundShipmentLineDTO., must be bigger than or equal to 0.');
         }
 
         $this->container['tax_cost'] = $tax_cost;

@@ -576,64 +576,64 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
             $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 500.";
         }
 
-        if (!is_null($this->container['order_pack_quantity']) && ($this->container['order_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['order_pack_quantity']) && ($this->container['order_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['order_pack_quantity']) && ($this->container['order_pack_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'order_pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['damaged_pack_quantity']) && ($this->container['damaged_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'damaged_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['damaged_pack_quantity']) && ($this->container['damaged_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'damaged_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['damaged_pack_quantity']) && ($this->container['damaged_pack_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'damaged_pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shipped_damaged_pack_quantity']) && ($this->container['shipped_damaged_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipped_damaged_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shipped_damaged_pack_quantity']) && ($this->container['shipped_damaged_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shipped_damaged_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shipped_damaged_pack_quantity']) && ($this->container['shipped_damaged_pack_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'shipped_damaged_pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['returned_pack_quantity']) && ($this->container['returned_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'returned_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['returned_pack_quantity']) && ($this->container['returned_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'returned_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['returned_pack_quantity']) && ($this->container['returned_pack_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'returned_pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shortage_pack_quantity']) && ($this->container['shortage_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shortage_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shortage_pack_quantity']) && ($this->container['shortage_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shortage_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shortage_pack_quantity']) && ($this->container['shortage_pack_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'shortage_pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['picked_pack_quantity']) && ($this->container['picked_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'picked_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['picked_pack_quantity']) && ($this->container['picked_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'picked_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['picked_pack_quantity']) && ($this->container['picked_pack_quantity'] < 0)) {
@@ -648,8 +648,8 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
             $invalidProperties[] = "invalid value for 'package_count', must be bigger than or equal to -2147483648.";
         }
 
-        if (!is_null($this->container['piece_count']) && ($this->container['piece_count'] > 0)) {
-            $invalidProperties[] = "invalid value for 'piece_count', must be smaller than or equal to 0.";
+        if (!is_null($this->container['piece_count']) && ($this->container['piece_count'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'piece_count', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['piece_count']) && ($this->container['piece_count'] < 0)) {
@@ -672,24 +672,24 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
             $invalidProperties[] = "invalid value for 'inventory_attribute2', the character length must be smaller than or equal to 255.";
         }
 
-        if (!is_null($this->container['unit_cost']) && ($this->container['unit_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'unit_cost', must be smaller than or equal to 0.";
+        if (!is_null($this->container['unit_cost']) && ($this->container['unit_cost'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'unit_cost', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['unit_cost']) && ($this->container['unit_cost'] < 0)) {
             $invalidProperties[] = "invalid value for 'unit_cost', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['freight_cost']) && ($this->container['freight_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'freight_cost', must be smaller than or equal to 0.";
+        if (!is_null($this->container['freight_cost']) && ($this->container['freight_cost'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'freight_cost', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['freight_cost']) && ($this->container['freight_cost'] < 0)) {
             $invalidProperties[] = "invalid value for 'freight_cost', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['tax_cost']) && ($this->container['tax_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'tax_cost', must be smaller than or equal to 0.";
+        if (!is_null($this->container['tax_cost']) && ($this->container['tax_cost'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'tax_cost', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['tax_cost']) && ($this->container['tax_cost'] < 0)) {
@@ -1083,7 +1083,7 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($order_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $order_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($order_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $order_pack_quantity when calling BaseShipmentLineDTO., must be bigger than or equal to 0.');
@@ -1118,7 +1118,7 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($shipped_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($shipped_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling BaseShipmentLineDTO., must be bigger than or equal to 0.');
@@ -1153,7 +1153,7 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($damaged_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $damaged_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $damaged_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($damaged_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $damaged_pack_quantity when calling BaseShipmentLineDTO., must be bigger than or equal to 0.');
@@ -1188,7 +1188,7 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($shipped_damaged_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_damaged_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shipped_damaged_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($shipped_damaged_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $shipped_damaged_pack_quantity when calling BaseShipmentLineDTO., must be bigger than or equal to 0.');
@@ -1223,7 +1223,7 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($returned_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $returned_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $returned_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($returned_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $returned_pack_quantity when calling BaseShipmentLineDTO., must be bigger than or equal to 0.');
@@ -1258,7 +1258,7 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($canceled_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($canceled_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling BaseShipmentLineDTO., must be bigger than or equal to 0.');
@@ -1293,7 +1293,7 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($shortage_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shortage_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shortage_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($shortage_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $shortage_pack_quantity when calling BaseShipmentLineDTO., must be bigger than or equal to 0.');
@@ -1328,7 +1328,7 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($picked_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $picked_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $picked_pack_quantity when calling BaseShipmentLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($picked_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $picked_pack_quantity when calling BaseShipmentLineDTO., must be bigger than or equal to 0.');
@@ -1398,7 +1398,7 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($piece_count > 0)) {
-            throw new \InvalidArgumentException('invalid value for $piece_count when calling BaseShipmentLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $piece_count when calling BaseShipmentLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($piece_count < 0)) {
             throw new \InvalidArgumentException('invalid value for $piece_count when calling BaseShipmentLineDTO., must be bigger than or equal to 0.');
@@ -1692,7 +1692,7 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($unit_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $unit_cost when calling BaseShipmentLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $unit_cost when calling BaseShipmentLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($unit_cost < 0)) {
             throw new \InvalidArgumentException('invalid value for $unit_cost when calling BaseShipmentLineDTO., must be bigger than or equal to 0.');
@@ -1727,7 +1727,7 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($freight_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $freight_cost when calling BaseShipmentLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $freight_cost when calling BaseShipmentLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($freight_cost < 0)) {
             throw new \InvalidArgumentException('invalid value for $freight_cost when calling BaseShipmentLineDTO., must be bigger than or equal to 0.');
@@ -1762,7 +1762,7 @@ class BaseShipmentLineDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($tax_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $tax_cost when calling BaseShipmentLineDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $tax_cost when calling BaseShipmentLineDTO., must be smaller than or equal to 10000000.');
         }
         if (($tax_cost < 0)) {
             throw new \InvalidArgumentException('invalid value for $tax_cost when calling BaseShipmentLineDTO., must be bigger than or equal to 0.');

@@ -432,8 +432,8 @@ class ItemVendorDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'item_sku_upc', the character length must be smaller than or equal to 50.";
         }
 
-        if (!is_null($this->container['unit_cost']) && ($this->container['unit_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'unit_cost', must be smaller than or equal to 0.";
+        if (!is_null($this->container['unit_cost']) && ($this->container['unit_cost'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'unit_cost', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['unit_cost']) && ($this->container['unit_cost'] < 0)) {
@@ -627,7 +627,7 @@ class ItemVendorDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($unit_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $unit_cost when calling ItemVendorDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $unit_cost when calling ItemVendorDTO., must be smaller than or equal to 10000000.');
         }
         if (($unit_cost < 0)) {
             throw new \InvalidArgumentException('invalid value for $unit_cost when calling ItemVendorDTO., must be bigger than or equal to 0.');

@@ -409,16 +409,16 @@ class StorageDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             );
         }
 
-        if (!is_null($this->container['minimum_pick']) && ($this->container['minimum_pick'] > 0)) {
-            $invalidProperties[] = "invalid value for 'minimum_pick', must be smaller than or equal to 0.";
+        if (!is_null($this->container['minimum_pick']) && ($this->container['minimum_pick'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'minimum_pick', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['minimum_pick']) && ($this->container['minimum_pick'] < 0)) {
             $invalidProperties[] = "invalid value for 'minimum_pick', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['maximum_pick']) && ($this->container['maximum_pick'] > 0)) {
-            $invalidProperties[] = "invalid value for 'maximum_pick', must be smaller than or equal to 0.";
+        if (!is_null($this->container['maximum_pick']) && ($this->container['maximum_pick'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'maximum_pick', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['maximum_pick']) && ($this->container['maximum_pick'] < 0)) {
@@ -663,7 +663,7 @@ class StorageDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($minimum_pick > 0)) {
-            throw new \InvalidArgumentException('invalid value for $minimum_pick when calling StorageDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $minimum_pick when calling StorageDTO., must be smaller than or equal to 10000000.');
         }
         if (($minimum_pick < 0)) {
             throw new \InvalidArgumentException('invalid value for $minimum_pick when calling StorageDTO., must be bigger than or equal to 0.');
@@ -698,7 +698,7 @@ class StorageDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($maximum_pick > 0)) {
-            throw new \InvalidArgumentException('invalid value for $maximum_pick when calling StorageDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $maximum_pick when calling StorageDTO., must be smaller than or equal to 10000000.');
         }
         if (($maximum_pick < 0)) {
             throw new \InvalidArgumentException('invalid value for $maximum_pick when calling StorageDTO., must be bigger than or equal to 0.');

@@ -570,16 +570,16 @@ class ShippedContainerDTO implements ModelInterface, ArrayAccess, \JsonSerializa
             $invalidProperties[] = "invalid value for 'usps_construct_code', the character length must be smaller than or equal to 50.";
         }
 
-        if (!is_null($this->container['shipping_cost']) && ($this->container['shipping_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipping_cost', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shipping_cost']) && ($this->container['shipping_cost'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shipping_cost', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shipping_cost']) && ($this->container['shipping_cost'] < 0)) {
             $invalidProperties[] = "invalid value for 'shipping_cost', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['insured_value']) && ($this->container['insured_value'] > 0)) {
-            $invalidProperties[] = "invalid value for 'insured_value', must be smaller than or equal to 0.";
+        if (!is_null($this->container['insured_value']) && ($this->container['insured_value'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'insured_value', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['insured_value']) && ($this->container['insured_value'] < 0)) {
@@ -1300,7 +1300,7 @@ class ShippedContainerDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($shipping_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipping_cost when calling ShippedContainerDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shipping_cost when calling ShippedContainerDTO., must be smaller than or equal to 10000000.');
         }
         if (($shipping_cost < 0)) {
             throw new \InvalidArgumentException('invalid value for $shipping_cost when calling ShippedContainerDTO., must be bigger than or equal to 0.');
@@ -1335,7 +1335,7 @@ class ShippedContainerDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($insured_value > 0)) {
-            throw new \InvalidArgumentException('invalid value for $insured_value when calling ShippedContainerDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $insured_value when calling ShippedContainerDTO., must be smaller than or equal to 10000000.');
         }
         if (($insured_value < 0)) {
             throw new \InvalidArgumentException('invalid value for $insured_value when calling ShippedContainerDTO., must be bigger than or equal to 0.');

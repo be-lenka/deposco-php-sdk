@@ -362,32 +362,32 @@ class CustomerOrderLineSiteDTO implements ModelInterface, ArrayAccess, \JsonSeri
         if ($this->container['order_quantity'] === null) {
             $invalidProperties[] = "'order_quantity' can't be null";
         }
-        if (($this->container['order_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'order_quantity', must be smaller than or equal to 0.";
+        if (($this->container['order_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'order_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (($this->container['order_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'order_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shipped_quantity']) && ($this->container['shipped_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipped_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shipped_quantity']) && ($this->container['shipped_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shipped_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shipped_quantity']) && ($this->container['shipped_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'shipped_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['canceled_quantity']) && ($this->container['canceled_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'canceled_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['canceled_quantity']) && ($this->container['canceled_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'canceled_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['canceled_quantity']) && ($this->container['canceled_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'canceled_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['returned_quantity']) && ($this->container['returned_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'returned_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['returned_quantity']) && ($this->container['returned_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'returned_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['returned_quantity']) && ($this->container['returned_quantity'] < 0)) {
@@ -522,7 +522,7 @@ class CustomerOrderLineSiteDTO implements ModelInterface, ArrayAccess, \JsonSeri
         }
 
         if (($order_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_quantity when calling CustomerOrderLineSiteDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $order_quantity when calling CustomerOrderLineSiteDTO., must be smaller than or equal to 10000000.');
         }
         if (($order_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $order_quantity when calling CustomerOrderLineSiteDTO., must be bigger than or equal to 0.');
@@ -557,7 +557,7 @@ class CustomerOrderLineSiteDTO implements ModelInterface, ArrayAccess, \JsonSeri
         }
 
         if (($shipped_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_quantity when calling CustomerOrderLineSiteDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shipped_quantity when calling CustomerOrderLineSiteDTO., must be smaller than or equal to 10000000.');
         }
         if (($shipped_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $shipped_quantity when calling CustomerOrderLineSiteDTO., must be bigger than or equal to 0.');
@@ -592,7 +592,7 @@ class CustomerOrderLineSiteDTO implements ModelInterface, ArrayAccess, \JsonSeri
         }
 
         if (($canceled_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_quantity when calling CustomerOrderLineSiteDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $canceled_quantity when calling CustomerOrderLineSiteDTO., must be smaller than or equal to 10000000.');
         }
         if (($canceled_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $canceled_quantity when calling CustomerOrderLineSiteDTO., must be bigger than or equal to 0.');
@@ -627,7 +627,7 @@ class CustomerOrderLineSiteDTO implements ModelInterface, ArrayAccess, \JsonSeri
         }
 
         if (($returned_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $returned_quantity when calling CustomerOrderLineSiteDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $returned_quantity when calling CustomerOrderLineSiteDTO., must be smaller than or equal to 10000000.');
         }
         if (($returned_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $returned_quantity when calling CustomerOrderLineSiteDTO., must be bigger than or equal to 0.');

@@ -395,24 +395,24 @@ class CustomerOrderRefundDTO implements ModelInterface, ArrayAccess, \JsonSerial
         if ($this->container['total'] === null) {
             $invalidProperties[] = "'total' can't be null";
         }
-        if (($this->container['total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 0.";
+        if (($this->container['total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 10000000.";
         }
 
         if (($this->container['total'] < 0)) {
             $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['sub_total']) && ($this->container['sub_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'sub_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['sub_total']) && ($this->container['sub_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'sub_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['sub_total']) && ($this->container['sub_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'sub_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['tax_total']) && ($this->container['tax_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'tax_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['tax_total']) && ($this->container['tax_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'tax_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['tax_total']) && ($this->container['tax_total'] < 0)) {
@@ -567,7 +567,7 @@ class CustomerOrderRefundDTO implements ModelInterface, ArrayAccess, \JsonSerial
         }
 
         if (($total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $total when calling CustomerOrderRefundDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $total when calling CustomerOrderRefundDTO., must be smaller than or equal to 10000000.');
         }
         if (($total < 0)) {
             throw new \InvalidArgumentException('invalid value for $total when calling CustomerOrderRefundDTO., must be bigger than or equal to 0.');
@@ -602,7 +602,7 @@ class CustomerOrderRefundDTO implements ModelInterface, ArrayAccess, \JsonSerial
         }
 
         if (($sub_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $sub_total when calling CustomerOrderRefundDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $sub_total when calling CustomerOrderRefundDTO., must be smaller than or equal to 10000000.');
         }
         if (($sub_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $sub_total when calling CustomerOrderRefundDTO., must be bigger than or equal to 0.');
@@ -637,7 +637,7 @@ class CustomerOrderRefundDTO implements ModelInterface, ArrayAccess, \JsonSerial
         }
 
         if (($tax_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $tax_total when calling CustomerOrderRefundDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $tax_total when calling CustomerOrderRefundDTO., must be smaller than or equal to 10000000.');
         }
         if (($tax_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $tax_total when calling CustomerOrderRefundDTO., must be bigger than or equal to 0.');

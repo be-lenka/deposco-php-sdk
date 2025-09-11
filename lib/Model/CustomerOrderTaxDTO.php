@@ -342,8 +342,8 @@ class CustomerOrderTaxDTO implements ModelInterface, ArrayAccess, \JsonSerializa
             $invalidProperties[] = "invalid value for 'tax_type', must be conform to the pattern /.*\\S.*/.";
         }
 
-        if (!is_null($this->container['tax_percentage']) && ($this->container['tax_percentage'] > 0)) {
-            $invalidProperties[] = "invalid value for 'tax_percentage', must be smaller than or equal to 0.";
+        if (!is_null($this->container['tax_percentage']) && ($this->container['tax_percentage'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'tax_percentage', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['tax_percentage']) && ($this->container['tax_percentage'] < 0)) {
@@ -353,8 +353,8 @@ class CustomerOrderTaxDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         if ($this->container['tax_amount'] === null) {
             $invalidProperties[] = "'tax_amount' can't be null";
         }
-        if (($this->container['tax_amount'] > 0)) {
-            $invalidProperties[] = "invalid value for 'tax_amount', must be smaller than or equal to 0.";
+        if (($this->container['tax_amount'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'tax_amount', must be smaller than or equal to 10000000.";
         }
 
         if (($this->container['tax_amount'] < 0)) {
@@ -472,7 +472,7 @@ class CustomerOrderTaxDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($tax_percentage > 0)) {
-            throw new \InvalidArgumentException('invalid value for $tax_percentage when calling CustomerOrderTaxDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $tax_percentage when calling CustomerOrderTaxDTO., must be smaller than or equal to 10000000.');
         }
         if (($tax_percentage < 0)) {
             throw new \InvalidArgumentException('invalid value for $tax_percentage when calling CustomerOrderTaxDTO., must be bigger than or equal to 0.');
@@ -507,7 +507,7 @@ class CustomerOrderTaxDTO implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         if (($tax_amount > 0)) {
-            throw new \InvalidArgumentException('invalid value for $tax_amount when calling CustomerOrderTaxDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $tax_amount when calling CustomerOrderTaxDTO., must be smaller than or equal to 10000000.');
         }
         if (($tax_amount < 0)) {
             throw new \InvalidArgumentException('invalid value for $tax_amount when calling CustomerOrderTaxDTO., must be bigger than or equal to 0.');

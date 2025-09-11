@@ -740,8 +740,8 @@ class ContainerDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'gtin', the character length must be smaller than or equal to 20.";
         }
 
-        if (!is_null($this->container['weight']) && ($this->container['weight'] > 0)) {
-            $invalidProperties[] = "invalid value for 'weight', must be smaller than or equal to 0.";
+        if (!is_null($this->container['weight']) && ($this->container['weight'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'weight', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['weight']) && ($this->container['weight'] < 0)) {
@@ -769,16 +769,16 @@ class ContainerDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'package_type', the character length must be smaller than or equal to 45.";
         }
 
-        if (!is_null($this->container['insured_value']) && ($this->container['insured_value'] > 0)) {
-            $invalidProperties[] = "invalid value for 'insured_value', must be smaller than or equal to 0.";
+        if (!is_null($this->container['insured_value']) && ($this->container['insured_value'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'insured_value', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['insured_value']) && ($this->container['insured_value'] < 0)) {
             $invalidProperties[] = "invalid value for 'insured_value', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shipping_cost']) && ($this->container['shipping_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipping_cost', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shipping_cost']) && ($this->container['shipping_cost'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shipping_cost', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shipping_cost']) && ($this->container['shipping_cost'] < 0)) {
@@ -1247,7 +1247,7 @@ class ContainerDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($weight > 0)) {
-            throw new \InvalidArgumentException('invalid value for $weight when calling ContainerDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $weight when calling ContainerDTO., must be smaller than or equal to 10000000.');
         }
         if (($weight < 0)) {
             throw new \InvalidArgumentException('invalid value for $weight when calling ContainerDTO., must be bigger than or equal to 0.');
@@ -1671,7 +1671,7 @@ class ContainerDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($insured_value > 0)) {
-            throw new \InvalidArgumentException('invalid value for $insured_value when calling ContainerDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $insured_value when calling ContainerDTO., must be smaller than or equal to 10000000.');
         }
         if (($insured_value < 0)) {
             throw new \InvalidArgumentException('invalid value for $insured_value when calling ContainerDTO., must be bigger than or equal to 0.');
@@ -1706,7 +1706,7 @@ class ContainerDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($shipping_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipping_cost when calling ContainerDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shipping_cost when calling ContainerDTO., must be smaller than or equal to 10000000.');
         }
         if (($shipping_cost < 0)) {
             throw new \InvalidArgumentException('invalid value for $shipping_cost when calling ContainerDTO., must be bigger than or equal to 0.');

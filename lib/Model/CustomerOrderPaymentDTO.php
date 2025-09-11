@@ -490,8 +490,8 @@ class CustomerOrderPaymentDTO implements ModelInterface, ArrayAccess, \JsonSeria
         if ($this->container['amount'] === null) {
             $invalidProperties[] = "'amount' can't be null";
         }
-        if (($this->container['amount'] > 0)) {
-            $invalidProperties[] = "invalid value for 'amount', must be smaller than or equal to 0.";
+        if (($this->container['amount'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'amount', must be smaller than or equal to 10000000.";
         }
 
         if (($this->container['amount'] < 0)) {
@@ -708,7 +708,7 @@ class CustomerOrderPaymentDTO implements ModelInterface, ArrayAccess, \JsonSeria
         }
 
         if (($amount > 0)) {
-            throw new \InvalidArgumentException('invalid value for $amount when calling CustomerOrderPaymentDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $amount when calling CustomerOrderPaymentDTO., must be smaller than or equal to 10000000.');
         }
         if (($amount < 0)) {
             throw new \InvalidArgumentException('invalid value for $amount when calling CustomerOrderPaymentDTO., must be bigger than or equal to 0.');

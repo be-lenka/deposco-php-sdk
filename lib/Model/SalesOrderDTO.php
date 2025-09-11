@@ -1179,72 +1179,72 @@ class SalesOrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'bill_to_account_number', the character length must be smaller than or equal to 30.";
         }
 
-        if (!is_null($this->container['order_total']) && ($this->container['order_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'order_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['order_total']) && ($this->container['order_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'order_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['order_total']) && ($this->container['order_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'order_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['order_subtotal']) && ($this->container['order_subtotal'] > 0)) {
-            $invalidProperties[] = "invalid value for 'order_subtotal', must be smaller than or equal to 0.";
+        if (!is_null($this->container['order_subtotal']) && ($this->container['order_subtotal'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'order_subtotal', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['order_subtotal']) && ($this->container['order_subtotal'] < 0)) {
             $invalidProperties[] = "invalid value for 'order_subtotal', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['order_discount_subtotal']) && ($this->container['order_discount_subtotal'] > 0)) {
-            $invalidProperties[] = "invalid value for 'order_discount_subtotal', must be smaller than or equal to 0.";
+        if (!is_null($this->container['order_discount_subtotal']) && ($this->container['order_discount_subtotal'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'order_discount_subtotal', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['order_discount_subtotal']) && ($this->container['order_discount_subtotal'] < 0)) {
             $invalidProperties[] = "invalid value for 'order_discount_subtotal', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['order_shipping_total']) && ($this->container['order_shipping_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'order_shipping_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['order_shipping_total']) && ($this->container['order_shipping_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'order_shipping_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['order_shipping_total']) && ($this->container['order_shipping_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'order_shipping_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['order_ship_total']) && ($this->container['order_ship_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'order_ship_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['order_ship_total']) && ($this->container['order_ship_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'order_ship_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['order_ship_total']) && ($this->container['order_ship_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'order_ship_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['order_tax_total']) && ($this->container['order_tax_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'order_tax_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['order_tax_total']) && ($this->container['order_tax_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'order_tax_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['order_tax_total']) && ($this->container['order_tax_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'order_tax_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['order_taxable_total']) && ($this->container['order_taxable_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'order_taxable_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['order_taxable_total']) && ($this->container['order_taxable_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'order_taxable_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['order_taxable_total']) && ($this->container['order_taxable_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'order_taxable_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['order_untaxable_total']) && ($this->container['order_untaxable_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'order_untaxable_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['order_untaxable_total']) && ($this->container['order_untaxable_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'order_untaxable_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['order_untaxable_total']) && ($this->container['order_untaxable_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'order_untaxable_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shipping_tax_total']) && ($this->container['shipping_tax_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipping_tax_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shipping_tax_total']) && ($this->container['shipping_tax_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shipping_tax_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shipping_tax_total']) && ($this->container['shipping_tax_total'] < 0)) {
@@ -2432,7 +2432,7 @@ class SalesOrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($order_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_total when calling SalesOrderDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $order_total when calling SalesOrderDTO., must be smaller than or equal to 10000000.');
         }
         if (($order_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $order_total when calling SalesOrderDTO., must be bigger than or equal to 0.');
@@ -2467,7 +2467,7 @@ class SalesOrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($order_subtotal > 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_subtotal when calling SalesOrderDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $order_subtotal when calling SalesOrderDTO., must be smaller than or equal to 10000000.');
         }
         if (($order_subtotal < 0)) {
             throw new \InvalidArgumentException('invalid value for $order_subtotal when calling SalesOrderDTO., must be bigger than or equal to 0.');
@@ -2502,7 +2502,7 @@ class SalesOrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($order_discount_subtotal > 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_discount_subtotal when calling SalesOrderDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $order_discount_subtotal when calling SalesOrderDTO., must be smaller than or equal to 10000000.');
         }
         if (($order_discount_subtotal < 0)) {
             throw new \InvalidArgumentException('invalid value for $order_discount_subtotal when calling SalesOrderDTO., must be bigger than or equal to 0.');
@@ -2537,7 +2537,7 @@ class SalesOrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($order_shipping_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_shipping_total when calling SalesOrderDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $order_shipping_total when calling SalesOrderDTO., must be smaller than or equal to 10000000.');
         }
         if (($order_shipping_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $order_shipping_total when calling SalesOrderDTO., must be bigger than or equal to 0.');
@@ -2572,7 +2572,7 @@ class SalesOrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($order_ship_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_ship_total when calling SalesOrderDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $order_ship_total when calling SalesOrderDTO., must be smaller than or equal to 10000000.');
         }
         if (($order_ship_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $order_ship_total when calling SalesOrderDTO., must be bigger than or equal to 0.');
@@ -2634,7 +2634,7 @@ class SalesOrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($order_tax_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_tax_total when calling SalesOrderDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $order_tax_total when calling SalesOrderDTO., must be smaller than or equal to 10000000.');
         }
         if (($order_tax_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $order_tax_total when calling SalesOrderDTO., must be bigger than or equal to 0.');
@@ -2669,7 +2669,7 @@ class SalesOrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($order_taxable_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_taxable_total when calling SalesOrderDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $order_taxable_total when calling SalesOrderDTO., must be smaller than or equal to 10000000.');
         }
         if (($order_taxable_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $order_taxable_total when calling SalesOrderDTO., must be bigger than or equal to 0.');
@@ -2704,7 +2704,7 @@ class SalesOrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($order_untaxable_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_untaxable_total when calling SalesOrderDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $order_untaxable_total when calling SalesOrderDTO., must be smaller than or equal to 10000000.');
         }
         if (($order_untaxable_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $order_untaxable_total when calling SalesOrderDTO., must be bigger than or equal to 0.');
@@ -2739,7 +2739,7 @@ class SalesOrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($shipping_tax_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipping_tax_total when calling SalesOrderDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shipping_tax_total when calling SalesOrderDTO., must be smaller than or equal to 10000000.');
         }
         if (($shipping_tax_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $shipping_tax_total when calling SalesOrderDTO., must be bigger than or equal to 0.');

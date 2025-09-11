@@ -1242,80 +1242,80 @@ class CustomerOrderRequestDTOCustomerOrder implements ModelInterface, ArrayAcces
             $invalidProperties[] = "invalid value for 'freight_bill_to_account', the character length must be smaller than or equal to 50.";
         }
 
-        if (!is_null($this->container['total']) && ($this->container['total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['total']) && ($this->container['total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
             $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['sub_total']) && ($this->container['sub_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'sub_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['sub_total']) && ($this->container['sub_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'sub_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['sub_total']) && ($this->container['sub_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'sub_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['discount_subtotal']) && ($this->container['discount_subtotal'] > 0)) {
-            $invalidProperties[] = "invalid value for 'discount_subtotal', must be smaller than or equal to 0.";
+        if (!is_null($this->container['discount_subtotal']) && ($this->container['discount_subtotal'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'discount_subtotal', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['discount_subtotal']) && ($this->container['discount_subtotal'] < 0)) {
             $invalidProperties[] = "invalid value for 'discount_subtotal', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shipping_total']) && ($this->container['shipping_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipping_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shipping_total']) && ($this->container['shipping_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shipping_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shipping_total']) && ($this->container['shipping_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'shipping_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shipping_amount']) && ($this->container['shipping_amount'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipping_amount', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shipping_amount']) && ($this->container['shipping_amount'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shipping_amount', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shipping_amount']) && ($this->container['shipping_amount'] < 0)) {
             $invalidProperties[] = "invalid value for 'shipping_amount', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['tax_total']) && ($this->container['tax_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'tax_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['tax_total']) && ($this->container['tax_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'tax_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['tax_total']) && ($this->container['tax_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'tax_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['taxable_total']) && ($this->container['taxable_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'taxable_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['taxable_total']) && ($this->container['taxable_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'taxable_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['taxable_total']) && ($this->container['taxable_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'taxable_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['untaxable_total']) && ($this->container['untaxable_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'untaxable_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['untaxable_total']) && ($this->container['untaxable_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'untaxable_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['untaxable_total']) && ($this->container['untaxable_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'untaxable_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['ship_tax_total']) && ($this->container['ship_tax_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'ship_tax_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['ship_tax_total']) && ($this->container['ship_tax_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'ship_tax_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['ship_tax_total']) && ($this->container['ship_tax_total'] < 0)) {
             $invalidProperties[] = "invalid value for 'ship_tax_total', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['insurance_total']) && ($this->container['insurance_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'insurance_total', must be smaller than or equal to 0.";
+        if (!is_null($this->container['insurance_total']) && ($this->container['insurance_total'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'insurance_total', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['insurance_total']) && ($this->container['insurance_total'] < 0)) {
@@ -2507,7 +2507,7 @@ class CustomerOrderRequestDTOCustomerOrder implements ModelInterface, ArrayAcces
         }
 
         if (($total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 10000000.');
         }
         if (($total < 0)) {
             throw new \InvalidArgumentException('invalid value for $total when calling CustomerOrderRequestDTOCustomerOrder., must be bigger than or equal to 0.');
@@ -2542,7 +2542,7 @@ class CustomerOrderRequestDTOCustomerOrder implements ModelInterface, ArrayAcces
         }
 
         if (($sub_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $sub_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $sub_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 10000000.');
         }
         if (($sub_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $sub_total when calling CustomerOrderRequestDTOCustomerOrder., must be bigger than or equal to 0.');
@@ -2577,7 +2577,7 @@ class CustomerOrderRequestDTOCustomerOrder implements ModelInterface, ArrayAcces
         }
 
         if (($discount_subtotal > 0)) {
-            throw new \InvalidArgumentException('invalid value for $discount_subtotal when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $discount_subtotal when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 10000000.');
         }
         if (($discount_subtotal < 0)) {
             throw new \InvalidArgumentException('invalid value for $discount_subtotal when calling CustomerOrderRequestDTOCustomerOrder., must be bigger than or equal to 0.');
@@ -2612,7 +2612,7 @@ class CustomerOrderRequestDTOCustomerOrder implements ModelInterface, ArrayAcces
         }
 
         if (($shipping_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipping_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shipping_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 10000000.');
         }
         if (($shipping_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $shipping_total when calling CustomerOrderRequestDTOCustomerOrder., must be bigger than or equal to 0.');
@@ -2647,7 +2647,7 @@ class CustomerOrderRequestDTOCustomerOrder implements ModelInterface, ArrayAcces
         }
 
         if (($shipping_amount > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipping_amount when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shipping_amount when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 10000000.');
         }
         if (($shipping_amount < 0)) {
             throw new \InvalidArgumentException('invalid value for $shipping_amount when calling CustomerOrderRequestDTOCustomerOrder., must be bigger than or equal to 0.');
@@ -2709,7 +2709,7 @@ class CustomerOrderRequestDTOCustomerOrder implements ModelInterface, ArrayAcces
         }
 
         if (($tax_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $tax_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $tax_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 10000000.');
         }
         if (($tax_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $tax_total when calling CustomerOrderRequestDTOCustomerOrder., must be bigger than or equal to 0.');
@@ -2744,7 +2744,7 @@ class CustomerOrderRequestDTOCustomerOrder implements ModelInterface, ArrayAcces
         }
 
         if (($taxable_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $taxable_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $taxable_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 10000000.');
         }
         if (($taxable_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $taxable_total when calling CustomerOrderRequestDTOCustomerOrder., must be bigger than or equal to 0.');
@@ -2779,7 +2779,7 @@ class CustomerOrderRequestDTOCustomerOrder implements ModelInterface, ArrayAcces
         }
 
         if (($untaxable_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $untaxable_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $untaxable_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 10000000.');
         }
         if (($untaxable_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $untaxable_total when calling CustomerOrderRequestDTOCustomerOrder., must be bigger than or equal to 0.');
@@ -2814,7 +2814,7 @@ class CustomerOrderRequestDTOCustomerOrder implements ModelInterface, ArrayAcces
         }
 
         if (($ship_tax_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $ship_tax_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $ship_tax_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 10000000.');
         }
         if (($ship_tax_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $ship_tax_total when calling CustomerOrderRequestDTOCustomerOrder., must be bigger than or equal to 0.');
@@ -2849,7 +2849,7 @@ class CustomerOrderRequestDTOCustomerOrder implements ModelInterface, ArrayAcces
         }
 
         if (($insurance_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $insurance_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $insurance_total when calling CustomerOrderRequestDTOCustomerOrder., must be smaller than or equal to 10000000.');
         }
         if (($insurance_total < 0)) {
             throw new \InvalidArgumentException('invalid value for $insurance_total when calling CustomerOrderRequestDTOCustomerOrder., must be bigger than or equal to 0.');

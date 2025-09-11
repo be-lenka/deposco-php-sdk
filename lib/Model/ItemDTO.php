@@ -850,16 +850,16 @@ class ItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'hazmat_code', the character length must be smaller than or equal to 4.";
         }
 
-        if (!is_null($this->container['unit_price']) && ($this->container['unit_price'] > 0)) {
-            //$invalidProperties[] = "invalid value for 'unit_price', must be smaller than or equal to 0.";
+        if (!is_null($this->container['unit_price']) && ($this->container['unit_price'] > 10000000)) {
+            //$invalidProperties[] = "invalid value for 'unit_price', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['unit_price']) && ($this->container['unit_price'] < 0)) {
             //$invalidProperties[] = "invalid value for 'unit_price', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['purchase_cost']) && ($this->container['purchase_cost'] > 0)) {
-            //$invalidProperties[] = "invalid value for 'purchase_cost', must be smaller than or equal to 0.";
+        if (!is_null($this->container['purchase_cost']) && ($this->container['purchase_cost'] > 10000000)) {
+            //$invalidProperties[] = "invalid value for 'purchase_cost', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['purchase_cost']) && ($this->container['purchase_cost'] < 0)) {
@@ -875,8 +875,8 @@ class ItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             );
         }
 
-        if (!is_null($this->container['receive_over_tolerance']) && ($this->container['receive_over_tolerance'] > 0)) {
-            $invalidProperties[] = "invalid value for 'receive_over_tolerance', must be smaller than or equal to 0.";
+        if (!is_null($this->container['receive_over_tolerance']) && ($this->container['receive_over_tolerance'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'receive_over_tolerance', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['receive_over_tolerance']) && ($this->container['receive_over_tolerance'] < 0)) {
@@ -1763,7 +1763,7 @@ class ItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($unit_price > 0)) {
-            //throw new \InvalidArgumentException('invalid value for $unit_price when calling ItemDTO., must be smaller than or equal to 0.');
+            //throw new \InvalidArgumentException('invalid value for $unit_price when calling ItemDTO., must be smaller than or equal to 10000000.');
         }
         if (($unit_price < 0)) {
             //throw new \InvalidArgumentException('invalid value for $unit_price when calling ItemDTO., must be bigger than or equal to 0.');
@@ -1798,7 +1798,7 @@ class ItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($purchase_cost > 0)) {
-            //throw new \InvalidArgumentException('invalid value for $purchase_cost when calling ItemDTO., must be smaller than or equal to 0.');
+            //throw new \InvalidArgumentException('invalid value for $purchase_cost when calling ItemDTO., must be smaller than or equal to 10000000.');
         }
         if (($purchase_cost < 0)) {
             //throw new \InvalidArgumentException('invalid value for $purchase_cost when calling ItemDTO., must be bigger than or equal to 0.');
@@ -2154,7 +2154,7 @@ class ItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (!is_null($receive_over_tolerance) && ($receive_over_tolerance > 0)) {
-            throw new \InvalidArgumentException('invalid value for $receive_over_tolerance when calling ItemDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $receive_over_tolerance when calling ItemDTO., must be smaller than or equal to 10000000.');
         }
         if (!is_null($receive_over_tolerance) && ($receive_over_tolerance < 0)) {
             throw new \InvalidArgumentException('invalid value for $receive_over_tolerance when calling ItemDTO., must be bigger than or equal to 0.');

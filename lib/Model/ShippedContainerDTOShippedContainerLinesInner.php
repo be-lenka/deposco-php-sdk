@@ -369,24 +369,24 @@ class ShippedContainerDTOShippedContainerLinesInner implements ModelInterface, A
             $invalidProperties[] = "invalid value for 'external_line_number', the character length must be smaller than or equal to 50.";
         }
 
-        if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shipped_damaged_pack_quantity']) && ($this->container['shipped_damaged_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipped_damaged_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['shipped_damaged_pack_quantity']) && ($this->container['shipped_damaged_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'shipped_damaged_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['shipped_damaged_pack_quantity']) && ($this->container['shipped_damaged_pack_quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'shipped_damaged_pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] < 0)) {
@@ -574,7 +574,7 @@ class ShippedContainerDTOShippedContainerLinesInner implements ModelInterface, A
         }
 
         if (($shipped_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling ShippedContainerDTOShippedContainerLinesInner., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling ShippedContainerDTOShippedContainerLinesInner., must be smaller than or equal to 10000000.');
         }
         if (($shipped_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling ShippedContainerDTOShippedContainerLinesInner., must be bigger than or equal to 0.');
@@ -609,7 +609,7 @@ class ShippedContainerDTOShippedContainerLinesInner implements ModelInterface, A
         }
 
         if (($shipped_damaged_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_damaged_pack_quantity when calling ShippedContainerDTOShippedContainerLinesInner., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $shipped_damaged_pack_quantity when calling ShippedContainerDTOShippedContainerLinesInner., must be smaller than or equal to 10000000.');
         }
         if (($shipped_damaged_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $shipped_damaged_pack_quantity when calling ShippedContainerDTOShippedContainerLinesInner., must be bigger than or equal to 0.');
@@ -644,7 +644,7 @@ class ShippedContainerDTOShippedContainerLinesInner implements ModelInterface, A
         }
 
         if (($canceled_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling ShippedContainerDTOShippedContainerLinesInner., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling ShippedContainerDTOShippedContainerLinesInner., must be smaller than or equal to 10000000.');
         }
         if (($canceled_pack_quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling ShippedContainerDTOShippedContainerLinesInner., must be bigger than or equal to 0.');

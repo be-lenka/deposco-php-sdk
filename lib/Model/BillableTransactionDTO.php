@@ -502,24 +502,24 @@ class BillableTransactionDTO implements ModelInterface, ArrayAccess, \JsonSerial
             $invalidProperties[] = "invalid value for 'container_number', the character length must be smaller than or equal to 50.";
         }
 
-        if (!is_null($this->container['quantity']) && ($this->container['quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'quantity', must be smaller than or equal to 0.";
+        if (!is_null($this->container['quantity']) && ($this->container['quantity'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'quantity', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['quantity']) && ($this->container['quantity'] < 0)) {
             $invalidProperties[] = "invalid value for 'quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['total_price']) && ($this->container['total_price'] > 0)) {
-            $invalidProperties[] = "invalid value for 'total_price', must be smaller than or equal to 0.";
+        if (!is_null($this->container['total_price']) && ($this->container['total_price'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'total_price', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['total_price']) && ($this->container['total_price'] < 0)) {
             $invalidProperties[] = "invalid value for 'total_price', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['total_cost']) && ($this->container['total_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'total_cost', must be smaller than or equal to 0.";
+        if (!is_null($this->container['total_cost']) && ($this->container['total_cost'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'total_cost', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['total_cost']) && ($this->container['total_cost'] < 0)) {
@@ -1036,7 +1036,7 @@ class BillableTransactionDTO implements ModelInterface, ArrayAccess, \JsonSerial
         }
 
         if (($quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $quantity when calling BillableTransactionDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $quantity when calling BillableTransactionDTO., must be smaller than or equal to 10000000.');
         }
         if (($quantity < 0)) {
             throw new \InvalidArgumentException('invalid value for $quantity when calling BillableTransactionDTO., must be bigger than or equal to 0.');
@@ -1071,7 +1071,7 @@ class BillableTransactionDTO implements ModelInterface, ArrayAccess, \JsonSerial
         }
 
         if (($total_price > 0)) {
-            throw new \InvalidArgumentException('invalid value for $total_price when calling BillableTransactionDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $total_price when calling BillableTransactionDTO., must be smaller than or equal to 10000000.');
         }
         if (($total_price < 0)) {
             throw new \InvalidArgumentException('invalid value for $total_price when calling BillableTransactionDTO., must be bigger than or equal to 0.');
@@ -1106,7 +1106,7 @@ class BillableTransactionDTO implements ModelInterface, ArrayAccess, \JsonSerial
         }
 
         if (($total_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $total_cost when calling BillableTransactionDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $total_cost when calling BillableTransactionDTO., must be smaller than or equal to 10000000.');
         }
         if (($total_cost < 0)) {
             throw new \InvalidArgumentException('invalid value for $total_cost when calling BillableTransactionDTO., must be bigger than or equal to 0.');

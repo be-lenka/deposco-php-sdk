@@ -495,81 +495,9 @@ class BaseShipmentDTOShippingCosts implements ModelInterface, ArrayAccess, \Json
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if (!is_null($this->container['shipping_cost']) && ($this->container['shipping_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipping_cost', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['shipping_cost']) && ($this->container['shipping_cost'] < 0)) {
-            $invalidProperties[] = "invalid value for 'shipping_cost', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['extended_shipping_cost']) && ($this->container['extended_shipping_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'extended_shipping_cost', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['extended_shipping_cost']) && ($this->container['extended_shipping_cost'] < 0)) {
-            $invalidProperties[] = "invalid value for 'extended_shipping_cost', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['tax_cost']) && ($this->container['tax_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'tax_cost', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['tax_cost']) && ($this->container['tax_cost'] < 0)) {
-            $invalidProperties[] = "invalid value for 'tax_cost', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['insurance_cost']) && ($this->container['insurance_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'insurance_cost', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['insurance_cost']) && ($this->container['insurance_cost'] < 0)) {
-            $invalidProperties[] = "invalid value for 'insurance_cost', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['insurance_amount']) && ($this->container['insurance_amount'] > 0)) {
-            $invalidProperties[] = "invalid value for 'insurance_amount', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['insurance_amount']) && ($this->container['insurance_amount'] < 0)) {
-            $invalidProperties[] = "invalid value for 'insurance_amount', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['handling_cost']) && ($this->container['handling_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'handling_cost', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['handling_cost']) && ($this->container['handling_cost'] < 0)) {
-            $invalidProperties[] = "invalid value for 'handling_cost', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['labor_cost']) && ($this->container['labor_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'labor_cost', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['labor_cost']) && ($this->container['labor_cost'] < 0)) {
-            $invalidProperties[] = "invalid value for 'labor_cost', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['materials_cost']) && ($this->container['materials_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'materials_cost', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['materials_cost']) && ($this->container['materials_cost'] < 0)) {
-            $invalidProperties[] = "invalid value for 'materials_cost', must be bigger than or equal to 0.";
-        }
-
+        
         if (!is_null($this->container['rate_zone']) && (mb_strlen($this->container['rate_zone']) > 20)) {
             $invalidProperties[] = "invalid value for 'rate_zone', the character length must be smaller than or equal to 20.";
-        }
-
-        if (!is_null($this->container['published_rate']) && ($this->container['published_rate'] > 0)) {
-            $invalidProperties[] = "invalid value for 'published_rate', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['published_rate']) && ($this->container['published_rate'] < 0)) {
-            $invalidProperties[] = "invalid value for 'published_rate', must be bigger than or equal to 0.";
         }
 
         $allowedValues = $this->getCurrencyCodeAllowableValues();
@@ -597,14 +525,6 @@ class BaseShipmentDTOShippingCosts implements ModelInterface, ArrayAccess, \Json
                 $this->container['fee_terms_type'],
                 implode("', '", $allowedValues)
             );
-        }
-
-        if (!is_null($this->container['customs_declared_value']) && ($this->container['customs_declared_value'] > 0)) {
-            $invalidProperties[] = "invalid value for 'customs_declared_value', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['customs_declared_value']) && ($this->container['customs_declared_value'] < 0)) {
-            $invalidProperties[] = "invalid value for 'customs_declared_value', must be bigger than or equal to 0.";
         }
 
         $allowedValues = $this->getDutyPaidByTypeAllowableValues();
@@ -670,13 +590,6 @@ class BaseShipmentDTOShippingCosts implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable shipping_cost cannot be null');
         }
 
-        if (($shipping_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipping_cost when calling BaseShipmentDTOShippingCosts., must be smaller than or equal to 0.');
-        }
-        if (($shipping_cost < 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipping_cost when calling BaseShipmentDTOShippingCosts., must be bigger than or equal to 0.');
-        }
-
         $this->container['shipping_cost'] = $shipping_cost;
 
         return $this;
@@ -705,13 +618,6 @@ class BaseShipmentDTOShippingCosts implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable extended_shipping_cost cannot be null');
         }
 
-        if (($extended_shipping_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $extended_shipping_cost when calling BaseShipmentDTOShippingCosts., must be smaller than or equal to 0.');
-        }
-        if (($extended_shipping_cost < 0)) {
-            throw new \InvalidArgumentException('invalid value for $extended_shipping_cost when calling BaseShipmentDTOShippingCosts., must be bigger than or equal to 0.');
-        }
-
         $this->container['extended_shipping_cost'] = $extended_shipping_cost;
 
         return $this;
@@ -738,13 +644,6 @@ class BaseShipmentDTOShippingCosts implements ModelInterface, ArrayAccess, \Json
     {
         if (is_null($tax_cost)) {
             throw new \InvalidArgumentException('non-nullable tax_cost cannot be null');
-        }
-
-        if (($tax_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $tax_cost when calling BaseShipmentDTOShippingCosts., must be smaller than or equal to 0.');
-        }
-        if (($tax_cost < 0)) {
-            throw new \InvalidArgumentException('invalid value for $tax_cost when calling BaseShipmentDTOShippingCosts., must be bigger than or equal to 0.');
         }
 
         $this->container['tax_cost'] = $tax_cost;
@@ -802,13 +701,6 @@ class BaseShipmentDTOShippingCosts implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable insurance_cost cannot be null');
         }
 
-        if (($insurance_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $insurance_cost when calling BaseShipmentDTOShippingCosts., must be smaller than or equal to 0.');
-        }
-        if (($insurance_cost < 0)) {
-            throw new \InvalidArgumentException('invalid value for $insurance_cost when calling BaseShipmentDTOShippingCosts., must be bigger than or equal to 0.');
-        }
-
         $this->container['insurance_cost'] = $insurance_cost;
 
         return $this;
@@ -835,13 +727,6 @@ class BaseShipmentDTOShippingCosts implements ModelInterface, ArrayAccess, \Json
     {
         if (is_null($insurance_amount)) {
             throw new \InvalidArgumentException('non-nullable insurance_amount cannot be null');
-        }
-
-        if (($insurance_amount > 0)) {
-            throw new \InvalidArgumentException('invalid value for $insurance_amount when calling BaseShipmentDTOShippingCosts., must be smaller than or equal to 0.');
-        }
-        if (($insurance_amount < 0)) {
-            throw new \InvalidArgumentException('invalid value for $insurance_amount when calling BaseShipmentDTOShippingCosts., must be bigger than or equal to 0.');
         }
 
         $this->container['insurance_amount'] = $insurance_amount;
@@ -872,13 +757,6 @@ class BaseShipmentDTOShippingCosts implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable handling_cost cannot be null');
         }
 
-        if (($handling_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $handling_cost when calling BaseShipmentDTOShippingCosts., must be smaller than or equal to 0.');
-        }
-        if (($handling_cost < 0)) {
-            throw new \InvalidArgumentException('invalid value for $handling_cost when calling BaseShipmentDTOShippingCosts., must be bigger than or equal to 0.');
-        }
-
         $this->container['handling_cost'] = $handling_cost;
 
         return $this;
@@ -907,13 +785,6 @@ class BaseShipmentDTOShippingCosts implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable labor_cost cannot be null');
         }
 
-        if (($labor_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $labor_cost when calling BaseShipmentDTOShippingCosts., must be smaller than or equal to 0.');
-        }
-        if (($labor_cost < 0)) {
-            throw new \InvalidArgumentException('invalid value for $labor_cost when calling BaseShipmentDTOShippingCosts., must be bigger than or equal to 0.');
-        }
-
         $this->container['labor_cost'] = $labor_cost;
 
         return $this;
@@ -940,13 +811,6 @@ class BaseShipmentDTOShippingCosts implements ModelInterface, ArrayAccess, \Json
     {
         if (is_null($materials_cost)) {
             throw new \InvalidArgumentException('non-nullable materials_cost cannot be null');
-        }
-
-        if (($materials_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $materials_cost when calling BaseShipmentDTOShippingCosts., must be smaller than or equal to 0.');
-        }
-        if (($materials_cost < 0)) {
-            throw new \InvalidArgumentException('invalid value for $materials_cost when calling BaseShipmentDTOShippingCosts., must be bigger than or equal to 0.');
         }
 
         $this->container['materials_cost'] = $materials_cost;
@@ -1006,13 +870,6 @@ class BaseShipmentDTOShippingCosts implements ModelInterface, ArrayAccess, \Json
     {
         if (is_null($published_rate)) {
             throw new \InvalidArgumentException('non-nullable published_rate cannot be null');
-        }
-
-        if (($published_rate > 0)) {
-            throw new \InvalidArgumentException('invalid value for $published_rate when calling BaseShipmentDTOShippingCosts., must be smaller than or equal to 0.');
-        }
-        if (($published_rate < 0)) {
-            throw new \InvalidArgumentException('invalid value for $published_rate when calling BaseShipmentDTOShippingCosts., must be bigger than or equal to 0.');
         }
 
         $this->container['published_rate'] = $published_rate;
@@ -1166,13 +1023,6 @@ class BaseShipmentDTOShippingCosts implements ModelInterface, ArrayAccess, \Json
     {
         if (is_null($customs_declared_value)) {
             throw new \InvalidArgumentException('non-nullable customs_declared_value cannot be null');
-        }
-
-        if (($customs_declared_value > 0)) {
-            throw new \InvalidArgumentException('invalid value for $customs_declared_value when calling BaseShipmentDTOShippingCosts., must be smaller than or equal to 0.');
-        }
-        if (($customs_declared_value < 0)) {
-            throw new \InvalidArgumentException('invalid value for $customs_declared_value when calling BaseShipmentDTOShippingCosts., must be bigger than or equal to 0.');
         }
 
         $this->container['customs_declared_value'] = $customs_declared_value;

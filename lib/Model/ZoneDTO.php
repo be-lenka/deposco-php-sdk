@@ -394,8 +394,8 @@ class ZoneDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 100.";
         }
 
-        if (!is_null($this->container['pick_rating']) && ($this->container['pick_rating'] > 0)) {
-            $invalidProperties[] = "invalid value for 'pick_rating', must be smaller than or equal to 0.";
+        if (!is_null($this->container['pick_rating']) && ($this->container['pick_rating'] > 10000000)) {
+            $invalidProperties[] = "invalid value for 'pick_rating', must be smaller than or equal to 10000000.";
         }
 
         if (!is_null($this->container['pick_rating']) && ($this->container['pick_rating'] < 0)) {
@@ -598,7 +598,7 @@ class ZoneDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         if (($pick_rating > 0)) {
-            throw new \InvalidArgumentException('invalid value for $pick_rating when calling ZoneDTO., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $pick_rating when calling ZoneDTO., must be smaller than or equal to 10000000.');
         }
         if (($pick_rating < 0)) {
             throw new \InvalidArgumentException('invalid value for $pick_rating when calling ZoneDTO., must be bigger than or equal to 0.');
