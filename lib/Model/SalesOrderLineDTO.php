@@ -796,138 +796,7 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
         if ($this->container['order_pack_quantity'] === null) {
             $invalidProperties[] = "'order_pack_quantity' can't be null";
         }
-        if (($this->container['order_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (($this->container['order_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be bigger than or equal to 483344729602260992.";
-        }
-
-        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be bigger than or equal to 483344729602260992.";
-        }
-
-        if (!is_null($this->container['lot_number']) && (mb_strlen($this->container['lot_number']) > 200)) {
-            $invalidProperties[] = "invalid value for 'lot_number', the character length must be smaller than or equal to 200.";
-        }
-
-        if (!is_null($this->container['product_code']) && (mb_strlen($this->container['product_code']) > 40)) {
-            $invalidProperties[] = "invalid value for 'product_code', the character length must be smaller than or equal to 40.";
-        }
-
-        if (!is_null($this->container['inventory_condition']) && (mb_strlen($this->container['inventory_condition']) > 255)) {
-            $invalidProperties[] = "invalid value for 'inventory_condition', the character length must be smaller than or equal to 255.";
-        }
-
-        if (!is_null($this->container['inventory_attribute1']) && (mb_strlen($this->container['inventory_attribute1']) > 255)) {
-            $invalidProperties[] = "invalid value for 'inventory_attribute1', the character length must be smaller than or equal to 255.";
-        }
-
-        if (!is_null($this->container['inventory_attribute2']) && (mb_strlen($this->container['inventory_attribute2']) > 255)) {
-            $invalidProperties[] = "invalid value for 'inventory_attribute2', the character length must be smaller than or equal to 255.";
-        }
-
-        if (!is_null($this->container['unit_price']) && ($this->container['unit_price'] > 0)) {
-            $invalidProperties[] = "invalid value for 'unit_price', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['unit_price']) && ($this->container['unit_price'] < 0)) {
-            $invalidProperties[] = "invalid value for 'unit_price', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['unit_cost']) && ($this->container['unit_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'unit_cost', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['unit_cost']) && ($this->container['unit_cost'] < 0)) {
-            $invalidProperties[] = "invalid value for 'unit_cost', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['price_code']) && (mb_strlen($this->container['price_code']) > 50)) {
-            $invalidProperties[] = "invalid value for 'price_code', the character length must be smaller than or equal to 50.";
-        }
-
-        if (!is_null($this->container['line_total']) && ($this->container['line_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'line_total', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['line_total']) && ($this->container['line_total'] < 0)) {
-            $invalidProperties[] = "invalid value for 'line_total', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['tax_cost']) && ($this->container['tax_cost'] > 0)) {
-            $invalidProperties[] = "invalid value for 'tax_cost', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['tax_cost']) && ($this->container['tax_cost'] < 0)) {
-            $invalidProperties[] = "invalid value for 'tax_cost', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['taxable_total']) && ($this->container['taxable_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'taxable_total', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['taxable_total']) && ($this->container['taxable_total'] < 0)) {
-            $invalidProperties[] = "invalid value for 'taxable_total', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['untaxable_total']) && ($this->container['untaxable_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'untaxable_total', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['untaxable_total']) && ($this->container['untaxable_total'] < 0)) {
-            $invalidProperties[] = "invalid value for 'untaxable_total', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['extended_total']) && ($this->container['extended_total'] > 0)) {
-            $invalidProperties[] = "invalid value for 'extended_total', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['extended_total']) && ($this->container['extended_total'] < 0)) {
-            $invalidProperties[] = "invalid value for 'extended_total', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['discount_amount']) && ($this->container['discount_amount'] > 0)) {
-            $invalidProperties[] = "invalid value for 'discount_amount', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['discount_amount']) && ($this->container['discount_amount'] < 0)) {
-            $invalidProperties[] = "invalid value for 'discount_amount', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['shipping_amount']) && ($this->container['shipping_amount'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shipping_amount', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['shipping_amount']) && ($this->container['shipping_amount'] < 0)) {
-            $invalidProperties[] = "invalid value for 'shipping_amount', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['import_reference']) && (mb_strlen($this->container['import_reference']) > 100)) {
-            $invalidProperties[] = "invalid value for 'import_reference', the character length must be smaller than or equal to 100.";
-        }
-
-        if (!is_null($this->container['export_reference']) && (mb_strlen($this->container['export_reference']) > 50)) {
-            $invalidProperties[] = "invalid value for 'export_reference', the character length must be smaller than or equal to 50.";
-        }
-
-        if (!is_null($this->container['custom_attribute1']) && (mb_strlen($this->container['custom_attribute1']) > 400)) {
-            $invalidProperties[] = "invalid value for 'custom_attribute1', the character length must be smaller than or equal to 400.";
-        }
-
-        if (!is_null($this->container['custom_attribute2']) && (mb_strlen($this->container['custom_attribute2']) > 400)) {
-            $invalidProperties[] = "invalid value for 'custom_attribute2', the character length must be smaller than or equal to 400.";
-        }
-
-        if (!is_null($this->container['custom_attribute3']) && (mb_strlen($this->container['custom_attribute3']) > 400)) {
-            $invalidProperties[] = "invalid value for 'custom_attribute3', the character length must be smaller than or equal to 400.";
-        }
-
+   
         $allowedValues = $this->getOrderLineStatusAllowableValues();
         if (!is_null($this->container['order_line_status']) && !in_array($this->container['order_line_status'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -937,54 +806,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
             );
         }
 
-        if (!is_null($this->container['allocated_quantity']) && ($this->container['allocated_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'allocated_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (!is_null($this->container['allocated_quantity']) && ($this->container['allocated_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'allocated_quantity', must be bigger than or equal to 483344729602260992.";
-        }
-
-        if (!is_null($this->container['unallocated_quantity']) && ($this->container['unallocated_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'unallocated_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (!is_null($this->container['unallocated_quantity']) && ($this->container['unallocated_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'unallocated_quantity', must be bigger than or equal to 483344729602260992.";
-        }
-
-        if (!is_null($this->container['picked_pack_quantity']) && ($this->container['picked_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'picked_pack_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (!is_null($this->container['picked_pack_quantity']) && ($this->container['picked_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'picked_pack_quantity', must be bigger than or equal to 483344729602260992.";
-        }
-
-        if (!is_null($this->container['shortage_pack_quantity']) && ($this->container['shortage_pack_quantity'] > 0)) {
-            $invalidProperties[] = "invalid value for 'shortage_pack_quantity', must be smaller than or equal to 0.";
-        }
-
-        if (!is_null($this->container['shortage_pack_quantity']) && ($this->container['shortage_pack_quantity'] < 0)) {
-            $invalidProperties[] = "invalid value for 'shortage_pack_quantity', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be bigger than or equal to 483344729602260992.";
-        }
-
-        if (!is_null($this->container['returned_pack_quantity']) && ($this->container['returned_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'returned_pack_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (!is_null($this->container['returned_pack_quantity']) && ($this->container['returned_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'returned_pack_quantity', must be bigger than or equal to 483344729602260992.";
-        }
-
         $allowedValues = $this->getIsBackOrderedAllowableValues();
         if (!is_null($this->container['is_back_ordered']) && !in_array($this->container['is_back_ordered'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -992,14 +813,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
                 $this->container['is_back_ordered'],
                 implode("', '", $allowedValues)
             );
-        }
-
-        if (!is_null($this->container['platinum_line_no']) && ($this->container['platinum_line_no'] > 2147483647)) {
-            $invalidProperties[] = "invalid value for 'platinum_line_no', must be smaller than or equal to 2147483647.";
-        }
-
-        if (!is_null($this->container['platinum_line_no']) && ($this->container['platinum_line_no'] < -2147483648)) {
-            $invalidProperties[] = "invalid value for 'platinum_line_no', must be bigger than or equal to -2147483648.";
         }
 
         return $invalidProperties;
@@ -1332,13 +1145,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable order_pack_quantity cannot be null');
         }
 
-        if (($order_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $order_pack_quantity when calling SalesOrderLineDTO., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($order_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $order_pack_quantity when calling SalesOrderLineDTO., must be bigger than or equal to 483344729602260992.');
-        }
-
         $this->container['order_pack_quantity'] = $order_pack_quantity;
 
         return $this;
@@ -1365,13 +1171,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         if (is_null($canceled_pack_quantity)) {
             throw new \InvalidArgumentException('non-nullable canceled_pack_quantity cannot be null');
-        }
-
-        if (($canceled_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling SalesOrderLineDTO., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($canceled_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling SalesOrderLineDTO., must be bigger than or equal to 483344729602260992.');
         }
 
         $this->container['canceled_pack_quantity'] = $canceled_pack_quantity;
@@ -1665,13 +1464,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable unit_price cannot be null');
         }
 
-        if (($unit_price > 0)) {
-            throw new \InvalidArgumentException('invalid value for $unit_price when calling SalesOrderLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($unit_price < 0)) {
-            throw new \InvalidArgumentException('invalid value for $unit_price when calling SalesOrderLineDTO., must be bigger than or equal to 0.');
-        }
-
         $this->container['unit_price'] = $unit_price;
 
         return $this;
@@ -1698,13 +1490,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         if (is_null($unit_cost)) {
             throw new \InvalidArgumentException('non-nullable unit_cost cannot be null');
-        }
-
-        if (($unit_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $unit_cost when calling SalesOrderLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($unit_cost < 0)) {
-            throw new \InvalidArgumentException('invalid value for $unit_cost when calling SalesOrderLineDTO., must be bigger than or equal to 0.');
         }
 
         $this->container['unit_cost'] = $unit_cost;
@@ -1766,13 +1551,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable line_total cannot be null');
         }
 
-        if (($line_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $line_total when calling SalesOrderLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($line_total < 0)) {
-            throw new \InvalidArgumentException('invalid value for $line_total when calling SalesOrderLineDTO., must be bigger than or equal to 0.');
-        }
-
         $this->container['line_total'] = $line_total;
 
         return $this;
@@ -1828,13 +1606,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable tax_cost cannot be null');
         }
 
-        if (($tax_cost > 0)) {
-            throw new \InvalidArgumentException('invalid value for $tax_cost when calling SalesOrderLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($tax_cost < 0)) {
-            throw new \InvalidArgumentException('invalid value for $tax_cost when calling SalesOrderLineDTO., must be bigger than or equal to 0.');
-        }
-
         $this->container['tax_cost'] = $tax_cost;
 
         return $this;
@@ -1861,13 +1632,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         if (is_null($taxable_total)) {
             throw new \InvalidArgumentException('non-nullable taxable_total cannot be null');
-        }
-
-        if (($taxable_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $taxable_total when calling SalesOrderLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($taxable_total < 0)) {
-            throw new \InvalidArgumentException('invalid value for $taxable_total when calling SalesOrderLineDTO., must be bigger than or equal to 0.');
         }
 
         $this->container['taxable_total'] = $taxable_total;
@@ -1898,13 +1662,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable untaxable_total cannot be null');
         }
 
-        if (($untaxable_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $untaxable_total when calling SalesOrderLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($untaxable_total < 0)) {
-            throw new \InvalidArgumentException('invalid value for $untaxable_total when calling SalesOrderLineDTO., must be bigger than or equal to 0.');
-        }
-
         $this->container['untaxable_total'] = $untaxable_total;
 
         return $this;
@@ -1931,13 +1688,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         if (is_null($extended_total)) {
             throw new \InvalidArgumentException('non-nullable extended_total cannot be null');
-        }
-
-        if (($extended_total > 0)) {
-            throw new \InvalidArgumentException('invalid value for $extended_total when calling SalesOrderLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($extended_total < 0)) {
-            throw new \InvalidArgumentException('invalid value for $extended_total when calling SalesOrderLineDTO., must be bigger than or equal to 0.');
         }
 
         $this->container['extended_total'] = $extended_total;
@@ -1968,13 +1718,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable discount_amount cannot be null');
         }
 
-        if (($discount_amount > 0)) {
-            throw new \InvalidArgumentException('invalid value for $discount_amount when calling SalesOrderLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($discount_amount < 0)) {
-            throw new \InvalidArgumentException('invalid value for $discount_amount when calling SalesOrderLineDTO., must be bigger than or equal to 0.');
-        }
-
         $this->container['discount_amount'] = $discount_amount;
 
         return $this;
@@ -2001,13 +1744,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         if (is_null($shipping_amount)) {
             throw new \InvalidArgumentException('non-nullable shipping_amount cannot be null');
-        }
-
-        if (($shipping_amount > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipping_amount when calling SalesOrderLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($shipping_amount < 0)) {
-            throw new \InvalidArgumentException('invalid value for $shipping_amount when calling SalesOrderLineDTO., must be bigger than or equal to 0.');
         }
 
         $this->container['shipping_amount'] = $shipping_amount;
@@ -2514,13 +2250,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable allocated_quantity cannot be null');
         }
 
-        if (($allocated_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $allocated_quantity when calling SalesOrderLineDTO., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($allocated_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $allocated_quantity when calling SalesOrderLineDTO., must be bigger than or equal to 483344729602260992.');
-        }
-
         $this->container['allocated_quantity'] = $allocated_quantity;
 
         return $this;
@@ -2547,13 +2276,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         if (is_null($unallocated_quantity)) {
             throw new \InvalidArgumentException('non-nullable unallocated_quantity cannot be null');
-        }
-
-        if (($unallocated_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $unallocated_quantity when calling SalesOrderLineDTO., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($unallocated_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $unallocated_quantity when calling SalesOrderLineDTO., must be bigger than or equal to 483344729602260992.');
         }
 
         $this->container['unallocated_quantity'] = $unallocated_quantity;
@@ -2584,13 +2306,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable picked_pack_quantity cannot be null');
         }
 
-        if (($picked_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $picked_pack_quantity when calling SalesOrderLineDTO., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($picked_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $picked_pack_quantity when calling SalesOrderLineDTO., must be bigger than or equal to 483344729602260992.');
-        }
-
         $this->container['picked_pack_quantity'] = $picked_pack_quantity;
 
         return $this;
@@ -2617,13 +2332,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         if (is_null($shortage_pack_quantity)) {
             throw new \InvalidArgumentException('non-nullable shortage_pack_quantity cannot be null');
-        }
-
-        if (($shortage_pack_quantity > 0)) {
-            throw new \InvalidArgumentException('invalid value for $shortage_pack_quantity when calling SalesOrderLineDTO., must be smaller than or equal to 0.');
-        }
-        if (($shortage_pack_quantity < 0)) {
-            throw new \InvalidArgumentException('invalid value for $shortage_pack_quantity when calling SalesOrderLineDTO., must be bigger than or equal to 0.');
         }
 
         $this->container['shortage_pack_quantity'] = $shortage_pack_quantity;
@@ -2654,13 +2362,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable shipped_pack_quantity cannot be null');
         }
 
-        if (($shipped_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling SalesOrderLineDTO., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($shipped_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling SalesOrderLineDTO., must be bigger than or equal to 483344729602260992.');
-        }
-
         $this->container['shipped_pack_quantity'] = $shipped_pack_quantity;
 
         return $this;
@@ -2687,13 +2388,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         if (is_null($returned_pack_quantity)) {
             throw new \InvalidArgumentException('non-nullable returned_pack_quantity cannot be null');
-        }
-
-        if (($returned_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $returned_pack_quantity when calling SalesOrderLineDTO., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($returned_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $returned_pack_quantity when calling SalesOrderLineDTO., must be bigger than or equal to 483344729602260992.');
         }
 
         $this->container['returned_pack_quantity'] = $returned_pack_quantity;
@@ -2793,13 +2487,6 @@ class SalesOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         if (is_null($platinum_line_no)) {
             throw new \InvalidArgumentException('non-nullable platinum_line_no cannot be null');
-        }
-
-        if (($platinum_line_no > 2147483647)) {
-            throw new \InvalidArgumentException('invalid value for $platinum_line_no when calling SalesOrderLineDTO., must be smaller than or equal to 2147483647.');
-        }
-        if (($platinum_line_no < -2147483648)) {
-            throw new \InvalidArgumentException('invalid value for $platinum_line_no when calling SalesOrderLineDTO., must be bigger than or equal to -2147483648.');
         }
 
         $this->container['platinum_line_no'] = $platinum_line_no;
