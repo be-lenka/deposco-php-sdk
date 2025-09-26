@@ -694,20 +694,20 @@ class PurchaseOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         if ($this->container['order_pack_quantity'] === null) {
             $invalidProperties[] = "'order_pack_quantity' can't be null";
         }
-        if (($this->container['order_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be smaller than or equal to -483344729602260992.";
+        if (($this->container['order_pack_quantity'] > 483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be smaller than or equal to 483344729602260992.";
         }
 
-        if (($this->container['order_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be bigger than or equal to 483344729602260992.";
+        if (($this->container['order_pack_quantity'] < -483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be bigger than or equal to -483344729602260992.";
         }
 
-        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be smaller than or equal to -483344729602260992.";
+        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] > 483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be smaller than or equal to 483344729602260992.";
         }
 
-        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be bigger than or equal to 483344729602260992.";
+        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] < -483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be bigger than or equal to -483344729602260992.";
         }
 
         if (!is_null($this->container['lot_number']) && (mb_strlen($this->container['lot_number']) > 200)) {
@@ -843,28 +843,28 @@ class PurchaseOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
             $invalidProperties[] = "invalid value for 'master_inbound_lpn', the character length must be smaller than or equal to 30.";
         }
 
-        if (!is_null($this->container['received_pack_quantity']) && ($this->container['received_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'received_pack_quantity', must be smaller than or equal to -483344729602260992.";
+        if (!is_null($this->container['received_pack_quantity']) && ($this->container['received_pack_quantity'] > 483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'received_pack_quantity', must be smaller than or equal to 483344729602260992.";
         }
 
-        if (!is_null($this->container['received_pack_quantity']) && ($this->container['received_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'received_pack_quantity', must be bigger than or equal to 483344729602260992.";
+        if (!is_null($this->container['received_pack_quantity']) && ($this->container['received_pack_quantity'] < -483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'received_pack_quantity', must be bigger than or equal to -483344729602260992.";
         }
 
-        if (!is_null($this->container['received_damaged_pack_quantity']) && ($this->container['received_damaged_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'received_damaged_pack_quantity', must be smaller than or equal to -483344729602260992.";
+        if (!is_null($this->container['received_damaged_pack_quantity']) && ($this->container['received_damaged_pack_quantity'] > 483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'received_damaged_pack_quantity', must be smaller than or equal to 483344729602260992.";
         }
 
-        if (!is_null($this->container['received_damaged_pack_quantity']) && ($this->container['received_damaged_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'received_damaged_pack_quantity', must be bigger than or equal to 483344729602260992.";
+        if (!is_null($this->container['received_damaged_pack_quantity']) && ($this->container['received_damaged_pack_quantity'] < -483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'received_damaged_pack_quantity', must be bigger than or equal to -483344729602260992.";
         }
 
-        if (!is_null($this->container['returned_pack_quantity']) && ($this->container['returned_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'returned_pack_quantity', must be smaller than or equal to -483344729602260992.";
+        if (!is_null($this->container['returned_pack_quantity']) && ($this->container['returned_pack_quantity'] > 483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'returned_pack_quantity', must be smaller than or equal to 483344729602260992.";
         }
 
-        if (!is_null($this->container['returned_pack_quantity']) && ($this->container['returned_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'returned_pack_quantity', must be bigger than or equal to 483344729602260992.";
+        if (!is_null($this->container['returned_pack_quantity']) && ($this->container['returned_pack_quantity'] < -483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'returned_pack_quantity', must be bigger than or equal to -483344729602260992.";
         }
 
         if (!is_null($this->container['invoice']) && (mb_strlen($this->container['invoice']) > 50)) {
@@ -1201,11 +1201,11 @@ class PurchaseOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable order_pack_quantity cannot be null');
         }
 
-        if (($order_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $order_pack_quantity when calling PurchaseOrderLineDTO., must be smaller than or equal to -483344729602260992.');
+        if (($order_pack_quantity > 483344729602260992)) {
+            throw new \InvalidArgumentException('invalid value for $order_pack_quantity when calling PurchaseOrderLineDTO., must be smaller than or equal to 483344729602260992.');
         }
-        if (($order_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $order_pack_quantity when calling PurchaseOrderLineDTO., must be bigger than or equal to 483344729602260992.');
+        if (($order_pack_quantity < -483344729602260992)) {
+            throw new \InvalidArgumentException('invalid value for $order_pack_quantity when calling PurchaseOrderLineDTO., must be bigger than or equal to -483344729602260992.');
         }
 
         $this->container['order_pack_quantity'] = $order_pack_quantity;
@@ -1236,11 +1236,11 @@ class PurchaseOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable canceled_pack_quantity cannot be null');
         }
 
-        if (($canceled_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling PurchaseOrderLineDTO., must be smaller than or equal to -483344729602260992.');
+        if (($canceled_pack_quantity > 483344729602260992)) {
+            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling PurchaseOrderLineDTO., must be smaller than or equal to 483344729602260992.');
         }
-        if (($canceled_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling PurchaseOrderLineDTO., must be bigger than or equal to 483344729602260992.');
+        if (($canceled_pack_quantity < -483344729602260992)) {
+            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling PurchaseOrderLineDTO., must be bigger than or equal to -483344729602260992.');
         }
 
         $this->container['canceled_pack_quantity'] = $canceled_pack_quantity;
@@ -2432,11 +2432,11 @@ class PurchaseOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable received_pack_quantity cannot be null');
         }
 
-        if (($received_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $received_pack_quantity when calling PurchaseOrderLineDTO., must be smaller than or equal to -483344729602260992.');
+        if (($received_pack_quantity > 483344729602260992)) {
+            throw new \InvalidArgumentException('invalid value for $received_pack_quantity when calling PurchaseOrderLineDTO., must be smaller than or equal to 483344729602260992.');
         }
-        if (($received_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $received_pack_quantity when calling PurchaseOrderLineDTO., must be bigger than or equal to 483344729602260992.');
+        if (($received_pack_quantity < -483344729602260992)) {
+            throw new \InvalidArgumentException('invalid value for $received_pack_quantity when calling PurchaseOrderLineDTO., must be bigger than or equal to -483344729602260992.');
         }
 
         $this->container['received_pack_quantity'] = $received_pack_quantity;
@@ -2467,11 +2467,11 @@ class PurchaseOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable received_damaged_pack_quantity cannot be null');
         }
 
-        if (($received_damaged_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $received_damaged_pack_quantity when calling PurchaseOrderLineDTO., must be smaller than or equal to -483344729602260992.');
+        if (($received_damaged_pack_quantity > 483344729602260992)) {
+            throw new \InvalidArgumentException('invalid value for $received_damaged_pack_quantity when calling PurchaseOrderLineDTO., must be smaller than or equal to 483344729602260992.');
         }
-        if (($received_damaged_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $received_damaged_pack_quantity when calling PurchaseOrderLineDTO., must be bigger than or equal to 483344729602260992.');
+        if (($received_damaged_pack_quantity < -483344729602260992)) {
+            throw new \InvalidArgumentException('invalid value for $received_damaged_pack_quantity when calling PurchaseOrderLineDTO., must be bigger than or equal to -483344729602260992.');
         }
 
         $this->container['received_damaged_pack_quantity'] = $received_damaged_pack_quantity;
@@ -2502,11 +2502,11 @@ class PurchaseOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable returned_pack_quantity cannot be null');
         }
 
-        if (($returned_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $returned_pack_quantity when calling PurchaseOrderLineDTO., must be smaller than or equal to -483344729602260992.');
+        if (($returned_pack_quantity > 483344729602260992)) {
+            throw new \InvalidArgumentException('invalid value for $returned_pack_quantity when calling PurchaseOrderLineDTO., must be smaller than or equal to 483344729602260992.');
         }
-        if (($returned_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $returned_pack_quantity when calling PurchaseOrderLineDTO., must be bigger than or equal to 483344729602260992.');
+        if (($returned_pack_quantity < -483344729602260992)) {
+            throw new \InvalidArgumentException('invalid value for $returned_pack_quantity when calling PurchaseOrderLineDTO., must be bigger than or equal to -483344729602260992.');
         }
 
         $this->container['returned_pack_quantity'] = $returned_pack_quantity;

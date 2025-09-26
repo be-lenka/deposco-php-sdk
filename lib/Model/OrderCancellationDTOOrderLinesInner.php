@@ -284,13 +284,6 @@ class OrderCancellationDTOOrderLinesInner implements ModelInterface, ArrayAccess
         if ($this->container['order_line'] === null) {
             $invalidProperties[] = "'order_line' can't be null";
         }
-        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be bigger than or equal to 483344729602260992.";
-        }
 
         return $invalidProperties;
     }
@@ -355,13 +348,6 @@ class OrderCancellationDTOOrderLinesInner implements ModelInterface, ArrayAccess
     {
         if (is_null($canceled_pack_quantity)) {
             throw new \InvalidArgumentException('non-nullable canceled_pack_quantity cannot be null');
-        }
-
-        if (($canceled_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling OrderCancellationDTOOrderLinesInner., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($canceled_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling OrderCancellationDTOOrderLinesInner., must be bigger than or equal to 483344729602260992.');
         }
 
         $this->container['canceled_pack_quantity'] = $canceled_pack_quantity;

@@ -601,20 +601,20 @@ class BaseOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 250.";
         }
 
-        if (!is_null($this->container['order_pack_quantity']) && ($this->container['order_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be smaller than or equal to -483344729602260992.";
+        if (!is_null($this->container['order_pack_quantity']) && ($this->container['order_pack_quantity'] > 483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be smaller than or equal to 483344729602260992.";
         }
 
-        if (!is_null($this->container['order_pack_quantity']) && ($this->container['order_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be bigger than or equal to 483344729602260992.";
+        if (!is_null($this->container['order_pack_quantity']) && ($this->container['order_pack_quantity'] < -483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'order_pack_quantity', must be bigger than or equal to -483344729602260992.";
         }
 
-        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be smaller than or equal to -483344729602260992.";
+        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] > 483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be smaller than or equal to 483344729602260992.";
         }
 
-        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be bigger than or equal to 483344729602260992.";
+        if (!is_null($this->container['canceled_pack_quantity']) && ($this->container['canceled_pack_quantity'] < -483344729602260992)) {
+            $invalidProperties[] = "invalid value for 'canceled_pack_quantity', must be bigger than or equal to -483344729602260992.";
         }
 
         if (!is_null($this->container['lot_number']) && (mb_strlen($this->container['lot_number']) > 200)) {
@@ -1063,12 +1063,6 @@ class BaseOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable order_pack_quantity cannot be null');
         }
 
-        if (($order_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $order_pack_quantity when calling BaseOrderLineDTO., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($order_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $order_pack_quantity when calling BaseOrderLineDTO., must be bigger than or equal to 483344729602260992.');
-        }
 
         $this->container['order_pack_quantity'] = $order_pack_quantity;
 
@@ -1098,12 +1092,6 @@ class BaseOrderLineDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable canceled_pack_quantity cannot be null');
         }
 
-        if (($canceled_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling BaseOrderLineDTO., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($canceled_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $canceled_pack_quantity when calling BaseOrderLineDTO., must be bigger than or equal to 483344729602260992.');
-        }
 
         $this->container['canceled_pack_quantity'] = $canceled_pack_quantity;
 

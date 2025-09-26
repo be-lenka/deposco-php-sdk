@@ -426,14 +426,6 @@ class VendorReturnLineDTOAllOf implements ModelInterface, ArrayAccess, \JsonSeri
             );
         }
 
-        if (!is_null($this->container['unallocated_quantity']) && ($this->container['unallocated_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'unallocated_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (!is_null($this->container['unallocated_quantity']) && ($this->container['unallocated_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'unallocated_quantity', must be bigger than or equal to 483344729602260992.";
-        }
-
         if (!is_null($this->container['picked_pack_quantity']) && ($this->container['picked_pack_quantity'] > 10000000)) {
             $invalidProperties[] = "invalid value for 'picked_pack_quantity', must be smaller than or equal to 10000000.";
         }
@@ -600,13 +592,6 @@ class VendorReturnLineDTOAllOf implements ModelInterface, ArrayAccess, \JsonSeri
     {
         if (is_null($unallocated_quantity)) {
             throw new \InvalidArgumentException('non-nullable unallocated_quantity cannot be null');
-        }
-
-        if (($unallocated_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $unallocated_quantity when calling VendorReturnLineDTOAllOf., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($unallocated_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $unallocated_quantity when calling VendorReturnLineDTOAllOf., must be bigger than or equal to 483344729602260992.');
         }
 
         $this->container['unallocated_quantity'] = $unallocated_quantity;

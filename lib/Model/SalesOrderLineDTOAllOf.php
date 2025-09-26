@@ -461,29 +461,6 @@ class SalesOrderLineDTOAllOf implements ModelInterface, ArrayAccess, \JsonSerial
             );
         }
 
-        if (!is_null($this->container['allocated_quantity']) && ($this->container['allocated_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'allocated_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (!is_null($this->container['allocated_quantity']) && ($this->container['allocated_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'allocated_quantity', must be bigger than or equal to 483344729602260992.";
-        }
-
-        if (!is_null($this->container['unallocated_quantity']) && ($this->container['unallocated_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'unallocated_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (!is_null($this->container['unallocated_quantity']) && ($this->container['unallocated_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'unallocated_quantity', must be bigger than or equal to 483344729602260992.";
-        }
-
-        if (!is_null($this->container['picked_pack_quantity']) && ($this->container['picked_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'picked_pack_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (!is_null($this->container['picked_pack_quantity']) && ($this->container['picked_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'picked_pack_quantity', must be bigger than or equal to 483344729602260992.";
-        }
 
         if (!is_null($this->container['shortage_pack_quantity']) && ($this->container['shortage_pack_quantity'] > 10000000)) {
             $invalidProperties[] = "invalid value for 'shortage_pack_quantity', must be smaller than or equal to 10000000.";
@@ -493,21 +470,6 @@ class SalesOrderLineDTOAllOf implements ModelInterface, ArrayAccess, \JsonSerial
             $invalidProperties[] = "invalid value for 'shortage_pack_quantity', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (!is_null($this->container['shipped_pack_quantity']) && ($this->container['shipped_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'shipped_pack_quantity', must be bigger than or equal to 483344729602260992.";
-        }
-
-        if (!is_null($this->container['returned_pack_quantity']) && ($this->container['returned_pack_quantity'] > -483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'returned_pack_quantity', must be smaller than or equal to -483344729602260992.";
-        }
-
-        if (!is_null($this->container['returned_pack_quantity']) && ($this->container['returned_pack_quantity'] < 483344729602260992)) {
-            $invalidProperties[] = "invalid value for 'returned_pack_quantity', must be bigger than or equal to 483344729602260992.";
-        }
 
         $allowedValues = $this->getIsBackOrderedAllowableValues();
         if (!is_null($this->container['is_back_ordered']) && !in_array($this->container['is_back_ordered'], $allowedValues, true)) {
@@ -669,12 +631,6 @@ class SalesOrderLineDTOAllOf implements ModelInterface, ArrayAccess, \JsonSerial
             throw new \InvalidArgumentException('non-nullable allocated_quantity cannot be null');
         }
 
-        if (($allocated_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $allocated_quantity when calling SalesOrderLineDTOAllOf., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($allocated_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $allocated_quantity when calling SalesOrderLineDTOAllOf., must be bigger than or equal to 483344729602260992.');
-        }
 
         $this->container['allocated_quantity'] = $allocated_quantity;
 
@@ -704,13 +660,6 @@ class SalesOrderLineDTOAllOf implements ModelInterface, ArrayAccess, \JsonSerial
             throw new \InvalidArgumentException('non-nullable unallocated_quantity cannot be null');
         }
 
-        if (($unallocated_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $unallocated_quantity when calling SalesOrderLineDTOAllOf., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($unallocated_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $unallocated_quantity when calling SalesOrderLineDTOAllOf., must be bigger than or equal to 483344729602260992.');
-        }
-
         $this->container['unallocated_quantity'] = $unallocated_quantity;
 
         return $this;
@@ -737,13 +686,6 @@ class SalesOrderLineDTOAllOf implements ModelInterface, ArrayAccess, \JsonSerial
     {
         if (is_null($picked_pack_quantity)) {
             throw new \InvalidArgumentException('non-nullable picked_pack_quantity cannot be null');
-        }
-
-        if (($picked_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $picked_pack_quantity when calling SalesOrderLineDTOAllOf., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($picked_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $picked_pack_quantity when calling SalesOrderLineDTOAllOf., must be bigger than or equal to 483344729602260992.');
         }
 
         $this->container['picked_pack_quantity'] = $picked_pack_quantity;
@@ -809,13 +751,6 @@ class SalesOrderLineDTOAllOf implements ModelInterface, ArrayAccess, \JsonSerial
             throw new \InvalidArgumentException('non-nullable shipped_pack_quantity cannot be null');
         }
 
-        if (($shipped_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling SalesOrderLineDTOAllOf., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($shipped_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling SalesOrderLineDTOAllOf., must be bigger than or equal to 483344729602260992.');
-        }
-
         $this->container['shipped_pack_quantity'] = $shipped_pack_quantity;
 
         return $this;
@@ -842,13 +777,6 @@ class SalesOrderLineDTOAllOf implements ModelInterface, ArrayAccess, \JsonSerial
     {
         if (is_null($returned_pack_quantity)) {
             throw new \InvalidArgumentException('non-nullable returned_pack_quantity cannot be null');
-        }
-
-        if (($returned_pack_quantity > -483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $returned_pack_quantity when calling SalesOrderLineDTOAllOf., must be smaller than or equal to -483344729602260992.');
-        }
-        if (($returned_pack_quantity < 483344729602260992)) {
-            throw new \InvalidArgumentException('invalid value for $returned_pack_quantity when calling SalesOrderLineDTOAllOf., must be bigger than or equal to 483344729602260992.');
         }
 
         $this->container['returned_pack_quantity'] = $returned_pack_quantity;
