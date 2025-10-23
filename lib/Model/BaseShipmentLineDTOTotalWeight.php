@@ -1,6 +1,6 @@
 <?php
 /**
- * BaseShipmentDTOTotalWeight
+ * BaseShipmentLineDTOTotalWeight
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \BeLenka\Deposco\ObjectSerializer;
 
 /**
- * BaseShipmentDTOTotalWeight Class Doc Comment
+ * BaseShipmentLineDTOTotalWeight Class Doc Comment
  *
  * @category Class
  * @description Total weight of the shipment.
@@ -41,7 +41,7 @@ use \BeLenka\Deposco\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class BaseShipmentDTOTotalWeight implements ModelInterface, ArrayAccess, \JsonSerializable
+class BaseShipmentLineDTOTotalWeight implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
