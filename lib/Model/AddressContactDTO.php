@@ -356,8 +356,8 @@ class AddressContactDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        if (!is_null($first_name) && (mb_strlen($first_name) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $first_name when calling AddressContactDTO., must be smaller than or equal to 30.');
+        if (!is_null($first_name) && (mb_strlen($first_name) > 50)) {
+            throw new \InvalidArgumentException('invalid length for $first_name when calling AddressContactDTO., must be smaller than or equal to 50.');
         }
 
         $this->container['first_name'] = $first_name;
@@ -394,8 +394,8 @@ class AddressContactDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        if (!is_null($last_name) && (mb_strlen($last_name) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $last_name when calling AddressContactDTO., must be smaller than or equal to 30.');
+        if (!is_null($last_name) && (mb_strlen($last_name) > 50)) {
+            throw new \InvalidArgumentException('invalid length for $last_name when calling AddressContactDTO., must be smaller than or equal to 50.');
         }
 
         $this->container['last_name'] = $last_name;
@@ -432,8 +432,8 @@ class AddressContactDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        if (!is_null($phone) && (mb_strlen($phone) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $phone when calling AddressContactDTO., must be smaller than or equal to 30.');
+        if (!is_null($phone) && (mb_strlen($phone) > 50)) {
+            throw new \InvalidArgumentException('invalid length for $phone when calling AddressContactDTO., must be smaller than or equal to 50.');
         }
 
         $this->container['phone'] = $phone;
