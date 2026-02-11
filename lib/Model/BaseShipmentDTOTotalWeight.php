@@ -58,7 +58,7 @@ class BaseShipmentDTOTotalWeight implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'value' => 'float',
+        'value' => 'int',
         'units' => '\BeLenka\Deposco\Model\WeightUOM'
     ];
 
