@@ -331,7 +331,7 @@ class ShippedContainerDTOWeight implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable value cannot be null');
         }
 
-        if (($value > 0)) {
+        if (($value > 10000000)) {
             throw new \InvalidArgumentException('invalid value for $value when calling ShippedContainerDTOWeight., must be smaller than or equal to 10000000.');
         }
         if (($value < 0)) {

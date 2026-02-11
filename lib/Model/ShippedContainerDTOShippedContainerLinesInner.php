@@ -573,7 +573,7 @@ class ShippedContainerDTOShippedContainerLinesInner implements ModelInterface, A
             throw new \InvalidArgumentException('non-nullable shipped_pack_quantity cannot be null');
         }
 
-        if (($shipped_pack_quantity > 0)) {
+        if (($shipped_pack_quantity > 10000000)) {
             throw new \InvalidArgumentException('invalid value for $shipped_pack_quantity when calling ShippedContainerDTOShippedContainerLinesInner., must be smaller than or equal to 10000000.');
         }
         if (($shipped_pack_quantity < 0)) {
