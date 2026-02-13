@@ -286,7 +286,7 @@ class ShippedContainerDTOWeight implements ModelInterface, ArrayAccess, \JsonSer
             $invalidProperties[] = "'value' can't be null";
         }
         if (($this->container['value'] > 10000000)) {
-            $invalidProperties[] = "invalid value for 'value', must be smaller than or equal to 10000000.";
+            //$invalidProperties[] = "invalid value for 'value', must be smaller than or equal to 10000000.";
         }
 
         if (($this->container['value'] < 0)) {
@@ -332,7 +332,7 @@ class ShippedContainerDTOWeight implements ModelInterface, ArrayAccess, \JsonSer
         }
 
         if (($value > 10000000)) {
-            throw new \InvalidArgumentException('invalid value for $value when calling ShippedContainerDTOWeight., must be smaller than or equal to 10000000.');
+            //throw new \InvalidArgumentException('invalid value for $value when calling ShippedContainerDTOWeight., must be smaller than or equal to 10000000.');
         }
         if (($value < 0)) {
             throw new \InvalidArgumentException('invalid value for $value when calling ShippedContainerDTOWeight., must be bigger than or equal to 0.');
